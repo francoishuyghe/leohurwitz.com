@@ -45,6 +45,17 @@
           <p>@if($data['length']) {{ $data['length'] }} minutes @else N/A @endif @if($data['surviving'])(surviving)@endif</p> 
           <h5>Format</h5>
           <p>{{ $data['format'] }}</p>
+          @php $posts = $data['collaborators'] @endphp
+          @if( $posts )
+          <h5>Key People</h5>
+          <ul>
+            @foreach( $posts as $p )
+              <li>
+                <a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo get_the_title( $p->ID ); ?></a>
+              </li>
+	        @endforeach
+	        </ul>
+        @endif
       </div>
 
       <div class="col-md-8">
@@ -53,19 +64,6 @@
         
         <h2>Credits</h2>
         {!! $data['credits'] !!}
-
-        @php $posts = $data['collaborators'] @endphp
-        @if( $posts )
-          <h2>Collaborators</h2>
-          <ul>
-            @foreach( $posts as $p )
-              <li>
-                <a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo get_the_title( $p->ID ); ?></a>
-                <span>Custom field from $post: <?php the_field('bio', $p->ID); ?></span>
-              </li>
-	        @endforeach
-	        </ul>
-        @endif
       </div>
     </section>
 
