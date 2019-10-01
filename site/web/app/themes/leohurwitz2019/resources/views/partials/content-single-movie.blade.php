@@ -5,31 +5,38 @@
   </header>
   <div class="entry-content">
 
-    <section>
+    <section id="media">
       <h2>Media</h2>
+
+      <div class="row">
       @if( have_rows('media') )
       @while ( have_rows('media') ) @php the_row() @endphp
 
         @if( get_row_layout() == 'video' )
-        <div class="embed-container">
-            @php the_sub_field('video') @endphp
+        <div class="col-md-4 media-item video">
+          <div class="embed-container">
+              @php the_sub_field('video') @endphp
+          </div>
         </div>
         
         @elseif( get_row_layout() == 'image' )
 
           @php $image = get_sub_field('image') @endphp
           @if( !empty($image) )
+          <div class="col-md-4 media-item image">
             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+          </div>
           @endif
 
         @elseif( get_row_layout() == 'text' )
-
-        	{!! the_sub_field('text') !!}
+          <div class="col-md-4 media-item text">
+            {!! the_sub_field('text') !!}
+          </div>
 
         @endif
 
     @endwhile
-
+    </div>
     @else
 
     @endif
