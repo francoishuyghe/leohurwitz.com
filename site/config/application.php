@@ -10,6 +10,13 @@
 
 use Roots\WPConfig\Config;
 
+/** OFFLOAD MEDIA CONFIG **/
+define( 'AS3CF_SETTINGS', serialize( array(
+    'provider' => 'do',
+    'access-key-id' => '7WB74YBGPI7AUM5XEMQQ',
+    'secret-access-key' => 'ZIg2QsFfh+6ImWd3ytng4ZRwnwjoyJ9EdjKLQUQwvM8',
+) ) );
+
 /** @var string Directory containing all of the site's files */
 $root_dir = dirname(__DIR__);
 
