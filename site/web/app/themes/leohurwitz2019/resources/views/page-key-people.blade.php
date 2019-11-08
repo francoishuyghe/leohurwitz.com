@@ -6,12 +6,19 @@
 
     @if($all_key_people->have_posts())
     <section>
-      <ul>
-    @while($all_key_people->have_posts()) @php($all_key_people->the_post())
-      <li><a href="{{ the_permalink() }}">{{ the_title() }}</a></li>
-    @endwhile
-    @php(wp_reset_postdata())
+      <div class="container">
+      <div class="row">
+        @while($all_key_people->have_posts()) @php($all_key_people->the_post())
+          <div class="person col-md-3 text-center">
+            <div class="thumbnail" style="background-image: url('{{ the_post_thumbnail_url() }}');"></div>
+            <a href="{{ the_permalink() }}">{{ the_title() }}</a></li>
+          </div>
+        @endwhile
+      </div>
+      </div>
+    </section>
     @endif
+    @php(wp_reset_postdata())
 
   @endwhile
 @endsection

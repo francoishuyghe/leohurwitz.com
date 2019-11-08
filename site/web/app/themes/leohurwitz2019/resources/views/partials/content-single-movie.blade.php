@@ -5,15 +5,15 @@
   </header>
   <div class="entry-content">
 
-    <section id="media">
-      <h2>Media</h2>
-
-      <div class="row">
       @if( have_rows('media') )
+    <section id="media">
+      <div class="slides"> 
+      
       @while ( have_rows('media') ) @php the_row() @endphp
+      <div class="slide media-item">
 
         @if( get_row_layout() == 'video' )
-        <div class="col-md-4 media-item video">
+        <div class="video">
           <div class="embed-container">
               @php the_sub_field('video') @endphp
           </div>
@@ -23,24 +23,23 @@
 
           @php $image = get_sub_field('image') @endphp
           @if( !empty($image) )
-          <div class="col-md-4 media-item image">
+          <div class="image">
             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
           </div>
           @endif
 
         @elseif( get_row_layout() == 'text' )
-          <div class="col-md-4 media-item text">
+          <div class="text">
             {!! the_sub_field('text') !!}
           </div>
 
         @endif
 
+      </div>
     @endwhile
     </div>
-    @else
-
-    @endif
-    </section>
+  </section>
+  @endif
 
     <section class="row">
       <div class="col-md-4">
