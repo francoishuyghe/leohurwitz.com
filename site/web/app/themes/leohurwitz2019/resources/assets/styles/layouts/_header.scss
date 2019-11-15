@@ -1,7 +1,43 @@
-.banner .nav li {
-  @extend .nav-item;
+.banner{
+  position: fixed;
+  top: 0;
+  right: $grid-gutter / 2;
+  padding: 10px;
+  z-index: 2;
+
+  a{
+    color: theme-color(white);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+  }
 }
 
-.banner .nav a {
-  @extend .nav-link;
+//Menu
+.menu-main-menu-container{
+  ul.menu{
+    padding: 0;
+
+    & > li{
+      list-style: none;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      margin-bottom: $grid-gutter;
+    }
+
+    .sub-menu{
+      padding-left: $grid-gutter / 2;
+
+      li{
+        list-style: none;
+        font-size: 1em;
+        text-transform: none;
+      }
+    }
+  }
+
+  a{
+    color: theme-color(white);
+  }
 }

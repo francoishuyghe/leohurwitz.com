@@ -19,6 +19,8 @@ class SingleMovie extends Controller
 		$data['credits'] = get_field('credits');
 		$data['links'] = get_field('links');
 		$data['collaborators'] = get_field('collaborators');
+		$data['photos'] = get_field('photos');
+		$data['film'] = get_field('film');
 	    return $data;
     }
 }
