@@ -7,11 +7,19 @@
 
     @if($all_interviews->have_posts())
     <section>
-      <ul>
+      <div class="row">
     @while($all_interviews->have_posts()) @php($all_interviews->the_post())
-      <li><a href="{{ the_permalink() }}">@if(get_field('year_span')) {{ the_field('year_span') }} @else {{ the_field('year') }}@endif - {{ the_title() }} {{ the_field('subtitle') }}</a></li>
+      <div class="col-md-4 movie">
+          <a href="{{ the_permalink() }}">
+            <div class="thumbnail" style="background-image: url({{ get_the_post_thumbnail_url() }})">
+                <h6>@if(get_field('year_span')) {{ the_field('year_span') }} @else {{ the_field('year') }}@endif</h6>
+            </div>
+            <h3>{{ the_title() }}</h3>
+            <h4>{{ the_field('subtitle') }}</h4>
+          </a>
+        </div>
     @endwhile
-      </ul>
+      </div>
     @php(wp_reset_postdata())
     @endif
     </div>

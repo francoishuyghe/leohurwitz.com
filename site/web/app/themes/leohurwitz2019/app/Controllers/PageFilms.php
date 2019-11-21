@@ -5,7 +5,7 @@ namespace App\Controllers;
 use Sober\Controller\Controller;
 use WP_Query;
 
-class PageFilmography extends Controller
+class PageFilms extends Controller
 {
     public function all_movies() {
 	    $args = array(

@@ -25,6 +25,17 @@ body{
         padding: 5px 14px;
       }
 
+      .sidebar-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+
+        h4{
+          text-transform: uppercase;
+        }
+      }
+
       &.active{
         transform: translateX(0);
 
