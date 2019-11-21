@@ -26,6 +26,15 @@ export default {
             },
             ],
         });
+    
+        // Video Player
+        $('.video-btn').click(function () {
+          $(this).parent('.video-wrap').addClass('active');
+        });
+
+        $('.video-player').click(function () {
+          $(this).parent('.video-wrap').removeClass('active');
+        });
         
     },
     finalize() {

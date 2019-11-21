@@ -11,6 +11,16 @@
         background-position: center;
         margin-bottom: $grid-gutter;
 
+        @include media-breakpoint-down(sm){
+            padding: $grid-gutter / 2 15px;
+
+            .video-wrap{
+                .video-btn{
+                    font-size: $grid-gutter;
+                }
+            }
+        }
+
         .gradient{
             position: absolute;
             bottom: 0;
@@ -24,6 +34,50 @@
 
         .container{
             z-index: 1;
+        }
+
+        .video-wrap{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .video-btn{
+                font-size: 100px;
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+
+            .video-player{
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(theme-color(black), .8);
+                z-index: 99;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &.active{
+                .video-btn{
+                    display: none;
+                }
+
+                .video-player{
+                    display: flex;
+                }
+            }
         }
     }
 

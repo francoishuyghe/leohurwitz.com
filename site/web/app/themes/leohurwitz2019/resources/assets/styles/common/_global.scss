@@ -11,7 +11,7 @@ body{
       padding: $grid-gutter;
       background: theme-color(black);
       color: theme-color(white);
-      overflow: hidden;
+      overflow: auto;
       transition: .3s;
       transform: translateX(-350px);
 
@@ -88,10 +88,17 @@ section{
     cursor: pointer;
     @extend h2;
 
-    &:after{
-      content: 'open';
+    .up, 
+    .down{
+      margin-left: 20px;
+    }
+
+    .up{
+      display: none;
+    }
+    
+    .down{
       display: inline-block;
-      padding-left: $grid-gutter / 2;
     }
   }
 
@@ -101,8 +108,12 @@ section{
 
   &.active{
     .accordeon-header{
-      &:after{
-        content: 'close';
+      .up{
+        display: inline-block;
+      }
+      
+      .down{
+        display: none;
       }
     }
   

@@ -5,17 +5,6 @@
       <h1 class="entry-title">{!! get_the_title() !!}</h1>
       @if($data['subtitle'])<h4>{{ $data['subtitle'] }}</h4>@endif
     </div>
-
-    @if( $data['film'] )
-    <div class="video-wrap">
-      <div class="video-btn"><i class="fas fa-play"></i></div>
-      <div class="video-player">
-        <div class="embed-container">
-            {!! $data['film'] !!}
-        </div>
-      </div>
-    </div>
-    @endif
   </header>
   
   <div class="entry-content">
@@ -86,7 +75,7 @@
         
         <section class="credits">
           <div class="accordeon">
-            <div class="accordeon-header">Credits <i class="fal fa-chevron-down down"></i><i class="fal fa-chevron-up up"></i></div>
+            <div class="accordeon-header">Credits</div>
             <div class="accordeon-content">
               {!! $data['credits'] !!}
             </div>
