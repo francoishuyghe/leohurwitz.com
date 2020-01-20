@@ -11,8 +11,7 @@ class PageFilms extends Controller
 	    $args = array(
 	    	'post_type' 		=> 'movie',
 			'posts_per_page' 	=> -1,
-			'meta_key'			=> 'year',
-			'orderby'			=> 'meta_value',
+			// 'orderby'			=> 'date',
 			'order'				=> 'ASC',
 	    );
 	    $the_query = new WP_Query( $args );

@@ -7,9 +7,9 @@
 
     <section id="movie-menu">
       <select class="sort-options">
+        <option value="">Featured</option>
         <option value="date">Date</option>
         <option value="name">Name</option>
-        <option value="">Featured</option>
       </select>
     </section>
 
@@ -24,7 +24,7 @@
           $dateDisplay = get_field('year');
         endif;
       @endphp
-      <div class="col-md-4 movie @if($hasFilm) hasFilm @endif" data-name="{{ the_title() }}" data-date="">
+      <div class="col-md-4 movie @if($hasFilm) hasFilm @endif" data-name="{{ the_title() }}" data-year="{{ the_field('year') }}">
         <a href="{{ the_permalink() }}">
           <div class="thumbnail" style="background-image: url({{ get_the_post_thumbnail_url() }})">
             <h6>{{ $dateDisplay }}</h6>

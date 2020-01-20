@@ -5,7 +5,6 @@ export default {
     // JavaScript to be fired on the about us page
 
     //var Shuffle = window.Shuffle;
-    console.log(Shuffle);
     var element = $('.movies-wrap');
     var sizer = ('.movie');
 
@@ -18,7 +17,7 @@ export default {
       var value = evt.target.value;
     
       function sortByDate(element) {
-        return $(element).data('date');
+        return $(element).data('year');
       }
     
       function sortByName(element) {

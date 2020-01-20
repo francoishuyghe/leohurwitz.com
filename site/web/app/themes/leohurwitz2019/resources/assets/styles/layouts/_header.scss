@@ -24,6 +24,16 @@
       font-size: 1.2em;
       text-transform: uppercase;
       margin-bottom: $grid-gutter;
+
+      &.inactive{
+        & > a{
+          pointer-events: none;
+
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
     }
 
     .sub-menu{
