@@ -11,7 +11,8 @@ class PageKeyPeople extends Controller
 	    $args = array(
 	    	'post_type' => 'key_people',
 			'posts_per_page' => -1,
-			'orderby' => 'title',
+			'meta_key'	=> 'last_name',
+			'orderby'	=> 'meta_value',
 			'order' => 'ASC',
 	    );
 	    $the_query = new WP_Query( $args );

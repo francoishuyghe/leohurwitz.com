@@ -10,7 +10,7 @@
   },
   "publicPath": "/app/themes/leohurwitz2019",
   "devUrl": "https://leohurwitz.test",
-  "proxyUrl": "https://localhost:3006",
+  "proxyUrl": "https://localhost:3007",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",
