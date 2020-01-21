@@ -10,42 +10,6 @@
   <div class="entry-content">
       <div class="container">
 
-      @if( have_rows('media') )
-    <section id="media">
-      <div class="slides"> 
-      
-      @while ( have_rows('media') ) @php the_row() @endphp
-      <div class="slide media-item">
-
-        @if( get_row_layout() == 'video' )
-        <div class="video">
-          <div class="embed-container">
-              @php the_sub_field('video') @endphp
-          </div>
-        </div>
-        
-        @elseif( get_row_layout() == 'image' )
-
-          @php $image = get_sub_field('image') @endphp
-          @if( !empty($image) )
-          <div class="image">
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-          </div>
-          @endif
-
-        @elseif( get_row_layout() == 'text' )
-          <div class="text">
-            {!! the_sub_field('text') !!}
-          </div>
-
-        @endif
-
-      </div>
-    @endwhile
-    </div>
-  </section>
-  @endif
-
     <div class="row">
       <div class="col-md-4">
           <p>A film by @if($data['directed_by']){{ $data['directed_by'] }} @else Leo Hurwitz @endif</p>
@@ -71,6 +35,10 @@
       <div id="content" class="col-md-8">
         <section class="synopsis">
           {!! $data['description'] !!}
+        </section>
+
+        <section class="interview">
+          {!! the_content() !!}
         </section>
         
         <section class="credits">
