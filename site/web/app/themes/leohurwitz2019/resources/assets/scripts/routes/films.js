@@ -13,8 +13,11 @@ export default {
       sizer: sizer, // could also be a selector: '.my-sizer-element'
     });
 
-    $('.sort-options').change(function (evt) {
-      var value = evt.target.value;
+    $('.sort-options a').click(function (evt) {
+      var value = $(evt.target).data('sort');
+
+      $('.sort-options a').removeClass('active');
+      $(evt.target).addClass('active');
     
       function sortByDate(element) {
         return $(element).data('year');

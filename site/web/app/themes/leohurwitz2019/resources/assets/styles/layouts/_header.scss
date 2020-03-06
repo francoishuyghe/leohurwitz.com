@@ -1,29 +1,73 @@
 .banner{
   position: fixed;
   top: 0;
-  right: $grid-gutter / 2;
-  padding: 10px;
+  left: 0;
+  width: 100%;
   z-index: 2;
+  border-bottom: 1px solid theme-color(black);
+
+  .top{
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    padding: 0;
+    height: 50px;
+    background: theme-color(white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .menu-toggle{
+      position: absolute;
+      left: $grid-gutter / 2;
+      color: theme-color(grey);
+      cursor: pointer;
+    }
+  }
+
+  .bottom{
+    z-index: -1;
+    height: 0;
+    overflow: hidden;
+    background: theme-color(white);
+    transition: .25s;
+  }
 
   a{
-    color: theme-color(white);
-    text-transform: uppercase;
     font-weight: 600;
     font-size: 1.2em;
     letter-spacing: .1em;
+    color: theme-color(black);
+    font-weight: 400;
+  }
+
+  &.active{
+    .bottom{
+      height: 280px;
+    }
   }
 }
 
 //Menu
 .menu-main-menu-container{
-  ul.menu{
+  ul.nav{
     padding: 0;
+    font-size: .7em;
+    padding-top: $grid-gutter / 2;
 
     & > li{
       list-style: none;
       font-size: 1.2em;
+      
       text-transform: uppercase;
-      margin-bottom: $grid-gutter;
+      padding-right: $grid-gutter;
+      flex: 1;
+      
+      &> a{
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
 
       &.inactive{
         & > a{
@@ -37,17 +81,18 @@
     }
 
     .sub-menu{
-      padding-left: $grid-gutter / 2;
+      list-style: none;
+      padding-left: 0;
 
       li{
-        list-style: none;
         font-size: 1em;
         text-transform: none;
+        margin-bottom: 10px;
+
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
-  }
-
-  a{
-    color: theme-color(white);
   }
 }

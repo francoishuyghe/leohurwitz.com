@@ -9,7 +9,7 @@
     <section>
       <div class="row">
         @while($all_key_people->have_posts()) @php($all_key_people->the_post())
-        <div class="person col-md-3 text-center">
+        <div class="person col-md-3">
           <a href="{{ the_permalink() }}">
             <div class="thumbnail" style="background-image: url('{{ the_post_thumbnail_url() }}');"></div>
             <h4>{{ the_title() }}</h4>

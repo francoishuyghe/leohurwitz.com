@@ -3,8 +3,8 @@ export default {
     // JavaScript to be fired on all pages
 
     // Hamburger menu
-    $('.burger').click(function () {
-      $('.sidebar').toggleClass('active');
+    $('.menu-toggle').click(function () {
+      $('.banner').toggleClass('active');
     })
 
     //Accordeons

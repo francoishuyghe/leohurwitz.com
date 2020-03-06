@@ -29,11 +29,11 @@ export default {
     
         // Video Player
         $('.video-btn').click(function () {
-          $(this).parent('.video-wrap').addClass('active');
+          $(this).parent('.video-player').addClass('active');
         });
 
         $('.video-player').click(function () {
-          $(this).parent('.video-wrap').removeClass('active');
+          $(this).parent('.video-player').removeClass('active');
         });
         
     },

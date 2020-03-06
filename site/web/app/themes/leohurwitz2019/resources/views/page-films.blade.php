@@ -3,15 +3,15 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
     <div class="container">
-    @include('partials.page-header')
-
-    <section id="movie-menu">
-      <select class="sort-options">
-        <option value="">Featured</option>
-        <option value="date">Date</option>
-        <option value="name">Name</option>
-      </select>
-    </section>
+    <div class="page-header">
+            <h1>{!! App::title() !!}</h1>
+            <span class="sort-options">
+              Sort By: 
+              <a data-sort="" class="active">Featured</a>
+              <a data-sort="date">Date</a>
+              <a data-sort="name">Name</a>
+              </span>
+    </div>      
 
     @if($all_movies->have_posts())
     <section>
@@ -26,11 +26,9 @@
       @endphp
       <div class="col-md-4 movie @if($hasFilm) hasFilm @endif" data-name="{{ the_title() }}" data-year="{{ the_field('year') }}">
         <a href="{{ the_permalink() }}">
-          <div class="thumbnail" style="background-image: url({{ get_the_post_thumbnail_url() }})">
-            <h6>{{ $dateDisplay }}</h6>
-          </div>
-          <h3>{{ the_title() }}</h3>
-          <h4>{{ the_field('subtitle') }}</h4>
+          <div class="thumbnail" style="background-image: url({{ get_the_post_thumbnail_url() }})"></div>
+          <h4>{{ the_title() }}, {{ $dateDisplay }}</h3>
+          <h5>{{ the_field('subtitle') }}</h4>
           @if($hasFilm)<div class="tag">Film</div>@endif
         </a>
       </div>

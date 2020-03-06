@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-class FrontPage extends Controller
+class PagePhotographs extends Controller
 {
     public function data() {
-		$data['bottom_menu'] = get_field('bottom_menu');
+		$data['photos'] = get_field('photos');
 	    return $data;
     }
 }

@@ -5,8 +5,9 @@ namespace App\Controllers;
 use Sober\Controller\Controller;
 
 class SingleInterview extends Controller
-{
-    public function data() {
+{	
+
+	public function data() {
 		$data['subtitle'] = get_field('subtitle');
 		$data['directed_by'] = get_field('directed_by');
 		$data['year'] = get_field('year');
@@ -22,5 +23,5 @@ class SingleInterview extends Controller
 		$data['photos'] = get_field('photos');
 		$data['film'] = get_field('film');
 	    return $data;
-    }
+	}
 }

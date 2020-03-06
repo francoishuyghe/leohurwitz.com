@@ -3,17 +3,91 @@
         margin: $grid-gutter 0;
     }
 
-    @include media-breakpoint-down(sm){
-        .content{
-            padding-left: $grid-gutter;
+    main{
+        ul{
+            li{
+                margin-bottom: $grid-gutter / 2;
+            }
+        }
+    }
+}
+
+.home{
+    .content{
+        margin-top: 0;
+    }
+
+    .banner{
+        transform: translateY(-100%);
+        transition: .25s;
+
+        &.scrolled{
+            transform: translateY(0);
+        }
+    }
+
+    h1{
+        font-family: 'HelveticaNeue', sans-serif;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    .photo{
+        text-align: center;
+        padding: 0 $grid-gutter;
+        margin-bottom: $grid-gutter;
+
+        img{
+            max-width: 800px;
+        }
+    }
+
+    #bottomMenu{
+        border-top: 1px solid theme-color(black);
+
+        .menu-item{
+            padding: $grid-gutter 0;
+            border-bottom: 1px solid theme-color(black);
+
+            a{
+                display: flex;
+                justify-content: space-between;
+                color: theme-color(black);
+            }
+
+            &:last-child{
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
         }
     }
 }
 
 //Films page
+.films{
+    .page-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
+    .sort-options{
+        text-transform: uppercase;
+
+        a{
+            color: theme-color(grey);
+            cursor: pointer;
+            padding-left: 10px;
+
+            &.active{
+                color: theme-color(black);
+            }
+        }
+    }
+}
     .movie{
-        margin-bottom: $grid-gutter;
+        margin-bottom: $grid-gutter * 2;
 
         &.hasFilm{
             .thumbnail{
@@ -64,6 +138,7 @@
 //Key People
 .person{
     margin-bottom: $grid-gutter;
+    text-align: left;
 
     .thumbnail{
         height: 0;

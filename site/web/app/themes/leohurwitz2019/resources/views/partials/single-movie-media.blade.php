@@ -1,5 +1,6 @@
 @if( have_rows('media') )
     <section id="media">
+      <div class="container">
         <h2>Extras</h2>
       <div class="slides"> 
         @while ( have_rows('media') ) @php the_row() @endphp
@@ -9,6 +10,7 @@
                 </div>
           </div>
         @endwhile
+      </div>
       </div>
     </section>
 @endif
