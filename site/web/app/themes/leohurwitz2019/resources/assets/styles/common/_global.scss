@@ -52,7 +52,11 @@ p{
 }
 
 a{
+  color: theme-color(black);
+  text-decoration: underline;
+
   &:hover{
+    color: theme-color(black);
     text-decoration: none;
   }
 }
@@ -71,12 +75,6 @@ section{
 .accordeon{
   .accordeon-header{
     cursor: pointer;
-    @extend h2;
-
-    .up, 
-    .down{
-      margin-left: 20px;
-    }
 
     .up{
       display: none;

@@ -22,6 +22,10 @@
   <meta name="msapplication-TileImage" content="@asset('images/favicon/ms-icon-144x144.png')">
   <meta name="theme-color" content="#ffffff">
 
+  {{--  Slick --}}
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   {{-- Fonts --}}
   <script src="https://kit.fontawesome.com/ba9e3758fb.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.typekit.net/vac2ivs.css">

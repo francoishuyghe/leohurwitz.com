@@ -93,6 +93,23 @@
             h1{
                 margin-bottom: $grid-gutter;
             }
+
+            .key-people{
+                padding-left: 0;
+                list-style: none;
+
+                a{
+                    text-decoration: none;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .accordeon-header{
+                @extend h5;
+            }
         }
     }
 }

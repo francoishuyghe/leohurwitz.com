@@ -30,8 +30,8 @@
           <p>{{ $data['format'] }}</p>
           @php $posts = $data['collaborators'] @endphp
           @if( $posts )
-          <h5>Key People</h5>
-          <ul>
+          <h5>Collaborators</h5>
+          <ul class="key-people">
             @foreach( $posts as $p )
               <li>
                 <a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo get_the_title( $p->ID ); ?></a>
@@ -40,7 +40,7 @@
 	        </ul>
         @endif
         <div class="accordeon">
-          <div class="accordeon-header">See Full Credits</div>
+          <div class="accordeon-header"><span class="down">See</span><span class="up">Hide</span> Full Credits</div>
           <div class="accordeon-content">
             {!! $data['credits'] !!}
           </div>
