@@ -18,11 +18,28 @@
     }
 
     .banner{
-        transform: translateY(-100%);
+        border-color: transparent;
         transition: .25s;
 
+        .brand{
+            transition: .25s;
+            opacity: 0;
+        }
+
         &.scrolled{
-            transform: translateY(0);
+            border-color: theme-color(black);
+
+            .brand{
+                opacity: 1;
+            }
+        }
+
+        &.active{
+            border-color: theme-color(black);
+
+            .brand{
+                opacity: 1;
+            }
         }
     }
 
