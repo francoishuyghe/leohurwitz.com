@@ -4,6 +4,7 @@ export default {
 
     // Hamburger menu
     $('.menu-toggle').click(function () {
+      $(this).toggleClass('is-active');
       $('.banner').toggleClass('active');
     })
 

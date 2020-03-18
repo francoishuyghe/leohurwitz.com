@@ -27,7 +27,11 @@ h1{
 h2{
     font-family: miller-display, serif;
     font-weight: 100;
-    font-size: 1.7em;
+    font-size: 1.2em;
+
+    @include media-breakpoint-up(md){
+      font-size: 1.7em;
+    }
 }
 
 h3{
@@ -48,7 +52,7 @@ h5 {
 
 p{
   line-height: 1.5em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 a{

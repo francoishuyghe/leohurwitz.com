@@ -19,9 +19,52 @@
 
     .menu-toggle{
       position: absolute;
-      left: $grid-gutter / 2;
+      font-size: 1em;
+      left: 15px;
       color: theme-color(grey);
       cursor: pointer;
+
+      &.menu-text{
+        display: none;
+      }
+
+      &.hamburger{
+        padding: 0;
+
+        .hamburger-box{
+          transform: scale(.8);
+
+          .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+            background-color: theme-color(grey);
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md){
+      .menu-toggle{
+        left: $grid-gutter / 2;
+
+        &.hamburger{
+          display: none;
+        }
+
+        &.menu-text{
+          display: inline-block;
+          background: transparent;
+          border: 0;
+          transition: .25s;
+
+          &:hover{
+            color: theme-color(black);
+          }
+
+          &:focus{
+            outline: 0;
+            border: 0;
+          }
+        }
+      }
     }
   }
 
@@ -44,7 +87,11 @@
 
   &.active{
     .bottom{
-      height: 280px;
+      height: 100vh;
+
+      @include media-breakpoint-up(md){
+        height: 280px;
+      }
     }
   }
 }
