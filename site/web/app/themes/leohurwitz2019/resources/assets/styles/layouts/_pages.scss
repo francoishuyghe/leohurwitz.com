@@ -98,7 +98,8 @@
 }
 
 //Films page
-.films{
+.films,
+.interviews{
     .page-header{
         display: flex;
         justify-content: space-between;
@@ -128,6 +129,16 @@
             }    
         }
 
+        a{
+            text-decoration: none;
+
+            &:hover{
+                .thumbnail{
+                    opacity: .8;
+                }
+            }
+        }
+
         .thumbnail{
             position: relative;
             height: 0;
@@ -136,6 +147,7 @@
             background-size: cover;
             background-position: center;
             margin-bottom: 10px;
+            transition: .25s;
 
             h6{
                 position: absolute;
@@ -175,5 +187,20 @@
         background-color: theme-color(grey);
         background-size: cover;
         background-position: center;
+    }
+}
+
+//Photographs
+.photographs{
+    .photo{
+        margin-bottom: $grid-gutter;
+        text-align: center;
+
+        figcaption{
+            color: theme-color(grey);
+            font-size: .8em;
+            line-height: 1em;
+            margin-top: 10px;
+        }
     }
 }

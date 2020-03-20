@@ -1,3 +1,7 @@
+import 'lightgallery/dist/js/lightgallery-all';
+import 'lightgallery/modules/lg-thumbnail';
+import 'lightgallery/modules/lg-zoom';
+
 export default {
   init() {
     // JavaScript to be fired on all pages
@@ -15,5 +19,12 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
+
+    //Light Gallery
+    $('#lightgallery').lightGallery({
+      thumbnail: true,
+      share: false,
+      getCaptionFromTitleOrAlt: false,
+    }); 
   },
 };
