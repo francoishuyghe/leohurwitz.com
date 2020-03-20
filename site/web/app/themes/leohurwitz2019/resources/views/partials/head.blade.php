@@ -26,6 +26,10 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+  {{-- Light Gallery --}}
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lg-transitions.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css"/>
+
   {{-- Fonts --}}
   <script src="https://kit.fontawesome.com/ba9e3758fb.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.typekit.net/vac2ivs.css">
