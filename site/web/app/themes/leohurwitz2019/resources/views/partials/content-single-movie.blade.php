@@ -1,15 +1,16 @@
 <article {!! post_class() !!}>
-  <header class="movie-header">
-    <div class="container">
-      @php 
-          $video_uri = get_field('film', FALSE, FALSE);
-          $video_embed = get_field('film'); 
-          @endphp
-          @include('partials/video-player')
-    </div>
-  </header>
+  @php $video_embed = get_field('film');  @endphp
+  @if($video_embed)
+    <header class="movie-header">
+      <div class="container">
+        @php $video_uri = get_field('film', FALSE, FALSE); @endphp
+            @include('partials/video-player')
+      </div>
+    </header>
+  @endif
   
-  <div class="entry-content"> 
+  <div class="entry-content">
+
     <section id="content">
       <div class="container">
     <div class="row">
@@ -39,6 +40,8 @@
 	        @endforeach
 	        </ul>
         @endif
+
+        @if($data['credits'])
         <div class="accordeon">
           <div class="accordeon-header"><span class="down">See</span><span class="up">Hide</span> Full Credits</div>
           <div class="accordeon-content">
@@ -46,6 +49,8 @@
           </div>
         </div>
       </div>
+      @endif
+
       </div>
     </section>
 
@@ -65,8 +70,17 @@
             </div>
           </section>
         @endif
-
       </div>
-
-  </div>
+  <footer class="film-footer">
+    <div class="container">
+    <div class="row">
+      <div class="col-6 prev">
+        @php next_post_link( '%link' ) @endphp
+      </div>
+      <div class="col-6 next">
+        @php previous_post_link( '%link' ) @endphp
+      </div>
+    </div>
+    </div>
+  </footer>
 </article>

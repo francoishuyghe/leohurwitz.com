@@ -5,8 +5,6 @@ export default {
         
         //Carousel
         $('.slides').slick({
-            centerMode: true,
-            centerPadding: '25%',
             slidesToShow: 1,
             prevArrow: '.prevArrow',
             nextArrow: '.nextArrow',

@@ -2,7 +2,18 @@
 .single-interview{
 
     .content{
-        margin-top: $grid-gutter;
+        margin-top: 0;
+
+        article{
+            padding-top: $grid-gutter;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+            .entry-content{
+                flex: 1;
+            }
+        }
     }
 
     .movie-header{
@@ -89,6 +100,7 @@
         &#content{
             padding: 0;
             border-top: 0;
+            margin-top: $grid-gutter * 2;
 
             h1{
                 margin-bottom: $grid-gutter;
@@ -109,6 +121,24 @@
 
             .accordeon-header{
                 @extend h5;
+            }
+        }
+    }
+
+    .film-footer{
+        padding: $grid-gutter / 2 0;
+
+        .prev{
+            a:before{
+                content: '< ';
+            }
+        }
+
+        .next{
+            text-align: right;
+
+            a:after{
+                content: ' >';
             }
         }
     }
