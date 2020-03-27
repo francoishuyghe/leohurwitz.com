@@ -56,12 +56,12 @@
 
         img{
             width: 100%;
-            max-width: 1000px;
+            //max-width: none; 
         }
 
         @include media-breakpoint-up(md){
             margin-bottom: $grid-gutter;
-            padding: 0 $grid-gutter;
+            //padding: 0 $grid-gutter;
         }
     }
 
@@ -120,8 +120,13 @@
         }
     }
 }
+.movies-wrap{
+    display: block;
+
     .movie{
-        margin-bottom: $grid-gutter * 2;
+        height: 400px;
+        display: inline-block;
+        vertical-align: top;
 
         &.hasFilm{
             .thumbnail{
@@ -174,6 +179,9 @@
             }
         }
     }
+}
+
+    
 
 //Key People
 .person{

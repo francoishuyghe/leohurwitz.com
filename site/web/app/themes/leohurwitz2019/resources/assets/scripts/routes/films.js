@@ -6,11 +6,12 @@ export default {
 
     //var Shuffle = window.Shuffle;
     var element = $('.movies-wrap');
-    var sizer = ('.movie');
+    //var sizer = ('.movie');
 
     var shuffleInstance = new Shuffle(element, {
       itemSelector: '.movie',
-      sizer: sizer, // could also be a selector: '.my-sizer-element'
+      gutterWidth: 0,
+      //sizer: sizer, // could also be a selector: '.my-sizer-element'
     });
 
     $('.sort-options a').click(function (evt) {

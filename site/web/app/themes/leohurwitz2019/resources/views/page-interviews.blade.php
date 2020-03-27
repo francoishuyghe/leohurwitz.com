@@ -7,7 +7,7 @@
 
     @if($all_interviews->have_posts())
     <section>
-      <div class="row">
+      <div class="row movies-wrap">
     @while($all_interviews->have_posts()) @php($all_interviews->the_post())
       <div class="col-md-4 movie">
           <a href="{{ the_permalink() }}">
