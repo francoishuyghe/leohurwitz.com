@@ -40,7 +40,7 @@
         @if($data['subtitle'])<h4>{{ $data['subtitle'] }}</h4>@endif
       </div>
       <div class="col-md-6">
-        {!! $data['description'] !!}
+        {!! the_content() !!}
       </div>
       <div class="col-md-4 offset-md-2">
           <p>A film by @if($data['directed_by']){{ $data['directed_by'] }} @else Leo Hurwitz @endif</p>
