@@ -96,10 +96,10 @@
     <div class="container">
     <div class="row">
       <div class="col-6 prev">
-        @php next_post_link( '%link' ) @endphp
+        @php next_post_link( '%link', '<i class="far fa-arrow-left"></i> %title' ) @endphp
       </div>
       <div class="col-6 next">
-        @php previous_post_link( '%link' ) @endphp
+        @php previous_post_link( '%link', '%title <i class="far fa-arrow-right"></i>' ) @endphp
       </div>
     </div>
     </div>

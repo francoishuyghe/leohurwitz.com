@@ -145,17 +145,46 @@
     .film-footer{
         padding: $grid-gutter / 2 0;
 
+        a{
+            font-size: 1.2em;
+            font-family: miller-display, serif;
+
+            svg{
+                transition: .25s;
+            }
+
+            &:hover{
+                text-decoration: none;
+            }
+
+            @include media-breakpoint-up(md){
+                font-size: 1.5em;
+            }
+        }
+
         .prev{
-            a:before{
-                content: '< ';
+            svg{
+                margin-right: 10px;
+            }
+
+            &:hover{
+                svg{
+                    transform: translate(-10px);
+                }
             }
         }
 
         .next{
             text-align: right;
 
-            a:after{
-                content: ' >';
+            svg{
+                margin-left: 10px;
+            }
+
+            &:hover{
+                svg{
+                    transform: translate(10px);
+                }
             }
         }
     }
