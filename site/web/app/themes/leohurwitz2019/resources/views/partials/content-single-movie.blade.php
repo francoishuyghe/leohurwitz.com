@@ -12,9 +12,9 @@
         @php $video_uri = get_field('second_film', FALSE, FALSE);  @endphp
         @if($video_uri)
           <div class="hidden">
+            @php $video_embed = get_field('second_film');  @endphp
             @include('partials/video-player')
           </div>
-        </div>
 
           <div class="selection">
                 <a class="active" data-movie="1">
