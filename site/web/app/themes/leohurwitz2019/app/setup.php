@@ -131,10 +131,4 @@ add_action('after_setup_theme', function () {
     });
 });
 
-// New Menu for History pages
 
-
-function register_history_menu() {
-    register_nav_menu('history-menu',__( 'History Pages Menu' ));
-  }
-  add_action( 'init', 'register_history_menu' );
