@@ -1,6 +1,4 @@
 @php
-    //https://support.advancedcustomfields.com/forums/topic/youtube-thumbnail-object-with-oembed-field/
-
     // determine the video id
     $parse = parse_url( $video_uri );
     $clip_id = ltrim( $parse['path'],'/' );

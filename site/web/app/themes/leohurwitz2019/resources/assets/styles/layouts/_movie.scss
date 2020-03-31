@@ -19,12 +19,12 @@
     .movie-header{
         position: relative;
         color: theme-color(white);
+        margin-bottom: - $grid-gutter;
         display: flex;
         align-items: flex-end;
         padding-top: $grid-gutter;
         background-size: cover;
         background-position: center;
-        margin-bottom: $grid-gutter;
 
         @include media-breakpoint-down(sm){
             padding: $grid-gutter / 2 15px;
@@ -90,6 +90,23 @@
             }
         }
 
+        .selection{
+            text-align: center;
+            margin-top: 20px;
+
+            a{
+                color: theme-color(black);
+                margin: 0 10px;
+                display: inline-block;
+                text-transform: uppercase;
+                line-height: 1em;
+                cursor: pointer;
+
+                &.active{
+                    border-bottom: 2px solid theme-color(black);
+                }
+            }
+        }
     }
 
     section{

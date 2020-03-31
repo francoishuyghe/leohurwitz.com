@@ -20,8 +20,12 @@ body{
 
 h1{
   font-family: miller-display, serif;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 100;
+
+  @include media-breakpoint-up(md){
+    font-size: 3em;
+  }
 }
 
 h2{
@@ -72,6 +76,10 @@ img{
 
 section{
   margin-bottom: $grid-gutter; 
+}
+
+.hidden{
+  display: none;
 }
 
 //Accordeon

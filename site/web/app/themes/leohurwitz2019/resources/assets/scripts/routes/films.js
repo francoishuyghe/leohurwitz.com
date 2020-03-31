@@ -6,7 +6,6 @@ export default {
 
     //var Shuffle = window.Shuffle;
     var element = $('.movies-wrap');
-    //var sizer = ('.movie');
 
     var shuffleInstance = new Shuffle(element, {
       itemSelector: '.movie',
