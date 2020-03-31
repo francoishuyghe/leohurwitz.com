@@ -10,6 +10,9 @@
       <div class="container"> 
         <div class="page-header">
           <h1>{!! App::title() !!}</h1>
+          <div class="history-menu">
+            {!! wp_nav_menu(['theme_location' => 'history_pages', 'menu_class' => 'history-nav']) !!}
+          </div>
         </div>
       </div>
     </section>
