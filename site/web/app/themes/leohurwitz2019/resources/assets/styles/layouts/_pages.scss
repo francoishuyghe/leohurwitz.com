@@ -98,9 +98,36 @@
 }
 
 // History Pages
-.template-history-pages{
+.template-history-page{
     #historyHeader{
         border-bottom: 1px solid theme-color(black);
+        padding-bottom: 0;
+
+        h1{
+            margin-bottom: $grid-gutter;
+        }
+
+        .history-menu{
+            max-width: 100%;
+
+            li{
+                display: inline-block;
+                list-style: none;
+                padding-right: $grid-gutter / 2;
+                margin-bottom: 0;
+
+                a{
+                    text-decoration: none;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .current-menu-item{
+                display: none;
+            }
+        }
     }
 }
 

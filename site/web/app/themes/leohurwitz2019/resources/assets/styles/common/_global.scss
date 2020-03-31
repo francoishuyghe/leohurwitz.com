@@ -78,6 +78,11 @@ section{
   margin-bottom: $grid-gutter; 
 }
 
+.wp-block-quote{
+  font-family: miller-display, serif;
+  font-size: 1.3em;
+}
+
 .hidden{
   display: none;
 }
@@ -129,6 +134,7 @@ section{
         h1, h2, h3, h4{
           @extend .col-md-12;
           padding-left: 0;
+          margin: 50px 0 25px;
         }
 
         p,
@@ -151,6 +157,10 @@ section{
         .wp-block-embed{
             @extend .col-md-6;
             float: right;
+
+            p{
+              max-width: 100%;
+            }
         }
         }
     }
