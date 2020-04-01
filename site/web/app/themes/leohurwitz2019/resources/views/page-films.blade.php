@@ -26,7 +26,8 @@
       @endphp
       <div class="col-md-4 movie @if($hasFilm) hasFilm @endif" data-name="{{ the_title() }}" data-year="{{ the_field('year') }}">
         <a href="{{ the_permalink() }}">
-          <div class="thumbnail" style="background-image: url({{ get_the_post_thumbnail_url() }})"></div>
+          @php $thumb = get_the_post_thumbnail_url() @endphp
+          <div class="thumbnail" style="background-image: url(@if($thumb){{ $thumb }} @else @asset('images/film-default.png') @endif)"></div>
           <h4>{{ the_title() }}, {{ $dateDisplay }}</h3>
           <h5>{{ the_field('subtitle') }}</h4>
           @if($hasFilm)<div class="tag"><i class="fas fa-play"></i> Watch Now</div>@endif
