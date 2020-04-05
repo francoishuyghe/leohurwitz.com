@@ -60,17 +60,20 @@
           <div class="container">
             <main>
             @foreach ($data['full_transcript'] as $section)
-                <div class="row">
+                <div class="row section">
                   <div class="col-6 accordeon">
-                    <div class="accordeon-header">
                       <h3>{{ $section['section_title'] }}</h3>
+                      <div class="accordeon-header">
+                      <span class="down">Read</span><span class="up">Hide</span> the full transcript
                     </div>
                     <div class="accordeon-content">
                       {!! $section['section_body'] !!}
                     </div>
                   </div>
                   <div class="col-6">
+                    <div class="embed-container">
                     {!! $section['section_video'] !!}
+                    </div>
                   </div>
                 </div>
             @endforeach
