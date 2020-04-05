@@ -1,19 +1,18 @@
-
-    @if($all_materials->have_posts())
+@foreach ($all_materials[0] as $cat)
+    @if($cat->slug)
     <section id="allMaterials">
-        <div class="row">
-        @while($all_materials->have_posts()) @php $all_materials->the_post() @endphp
-            @php $cats = wp_get_post_terms(get_the_ID(), 'category');@endphp
-
-            <div class="col-md-4">
-                <a class="btn" target="_blank" href="{{ the_permalink() }}">
-                    <h2>{{ the_title() }}</h2>
-                    @foreach($cats as $cat)
-                        <span class="cat">{{ $cat->name }}</span>
-                    @endforeach
+        <h3>{{ $cat->name }}</h3>
+        <ul>
+        @while($all_materials[1][$cat->slug]->have_posts()) @php $all_materials[1][$cat->slug]->the_post() @endphp
+            <li class="accordeon">
+                <h4 class="accordeon-header">{{ the_title() }}</h4>
+                <div class="accordeon-content">
+                    {!! the_content() !!}
+                </div>
                 </a>
-            </div>
+            </li>
         @endwhile
-        </div>
+        </ul>
     </section>
     @endif
+@endforeach

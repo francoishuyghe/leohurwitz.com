@@ -8,12 +8,21 @@ use WP_QUERY;
 class PagePrintedMaterial extends Controller
 {
     public function all_materials() {
-	    $args = array(
-	    	'post_type' 		=> 'printed_material',
-			'posts_per_page' 	=> -1,
-			'order'				=> 'ASC',
-	    );
-	    $the_query = new WP_Query( $args );
-	    return $the_query;
+
+		$the_posts = [];
+		$cats = get_terms('category');
+
+		foreach ($cats as $cat) {
+			$args = array(
+				'post_type' 		=> 'printed_material',
+				'posts_per_page' 	=> -1,
+				'order'				=> 'ASC',
+				'category_name'		=> $cat->slug,
+			);
+
+			$the_posts[$cat->slug] = new WP_Query( $args );
+		}
+
+	    return [$cats, $the_posts];
     }
 }

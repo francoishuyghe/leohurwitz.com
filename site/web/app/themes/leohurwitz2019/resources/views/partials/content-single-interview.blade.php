@@ -23,7 +23,7 @@
           @if($data['subtitle'])<h4>{{ $data['subtitle'] }}</h4>@endif
         </div>
         <div class="col-md-6">
-          {!! $data['description'] !!}
+          {!! the_content() !!}
         </div>
         <div class="col-md-3 offset-md-1">
           <p>A film by @if($data['directed_by']){{ $data['directed_by'] }} @else Leo Hurwitz @endif</p>
@@ -55,12 +55,25 @@
       </div>
     </section>
 
-    @if( get_the_content())
+    @if($data['full_transcript'])
         <section class="full-transcript">
           <div class="container">
-            <h2>Full Transcript</h2>
             <main>
-            {!! the_content() !!}
+            @foreach ($data['full_transcript'] as $section)
+                <div class="row">
+                  <div class="col-6 accordeon">
+                    <div class="accordeon-header">
+                      <h3>{{ $section['section_title'] }}</h3>
+                    </div>
+                    <div class="accordeon-content">
+                      {!! $section['section_body'] !!}
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    {!! $section['section_video'] !!}
+                  </div>
+                </div>
+            @endforeach
             </main>
           </div>
         </section>

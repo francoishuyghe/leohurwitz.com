@@ -16,7 +16,7 @@ class SingleInterview extends Controller
 		$data['surviving'] = get_field('surviving');
 		$data['format'] = get_field('format');
 		$data['media'] = get_field('media');
-		$data['description'] = get_field('description');
+		$data['full_transcript'] = get_field('full_transcript');
 		$data['credits'] = get_field('credits');
 		$data['links'] = get_field('links');
 		$data['collaborators'] = get_field('collaborators');
