@@ -97,9 +97,10 @@
     }
 }
 
-// History Pages
-.template-history-page{
-    #historyHeader{
+// History and Resources Pages
+.template-history-page,
+.template-resources-page{
+    #submenuHeader{
         border-bottom: 1px solid theme-color(black);
         padding-bottom: 0;
 
@@ -107,7 +108,8 @@
             margin-bottom: $grid-gutter;
         }
 
-        .history-menu{
+        .history-menu,
+        .resources-menu{
             max-width: 100%;
 
             li{
@@ -124,6 +126,7 @@
                     }
                 }
             }
+
             .current-menu-item{
                 opacity: .4;
             }
