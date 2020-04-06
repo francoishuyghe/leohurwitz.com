@@ -23,8 +23,8 @@ add_action('customize_preview_init', function () {
     wp_enqueue_script('sage/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
 });
 
-// New Menu for History pages
-
+// New Menu for history and resources pages
   add_action( 'init', function() {
-    register_nav_menu('history-menu',__( 'History Pages Menu' ));
+    register_nav_menu('history-menu',__( 'History Pages' ));
+    register_nav_menu('resources-menu',__( 'Resources Pages' ));
   } );
