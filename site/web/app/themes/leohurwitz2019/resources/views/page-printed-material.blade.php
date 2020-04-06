@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-  @while(have_posts()) @php the_post() @endphp
-    <div class="container"> 
-      @include('partials.page-header')
+  @while(have_posts()) @php the_post() @endphp 
+      @include('partials.resources-header')
       @include('partials.content-printed-material')
-    </div>
   @endwhile
 @endsection

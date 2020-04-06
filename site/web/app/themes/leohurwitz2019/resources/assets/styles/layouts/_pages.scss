@@ -103,14 +103,18 @@
     #submenuHeader{
         border-bottom: 1px solid theme-color(black);
         padding-bottom: 0;
+        margin-top: - $grid-gutter / 2;
 
         h1{
             margin-bottom: $grid-gutter;
+            line-height: 1;
         }
 
         .history-menu,
         .resources-menu{
+            padding-left: 0;
             max-width: 100%;
+            margin-bottom: $grid-gutter;
 
             li{
                 display: inline-block;
@@ -232,13 +236,26 @@
     margin-bottom: $grid-gutter;
     text-align: left;
 
-    .thumbnail{
-        height: 0;
-        padding-top: 80%;
-        margin-bottom: 10px;
-        background-color: theme-color(grey);
-        background-size: cover;
-        background-position: center;
+    a{
+        text-decoration: none;
+
+        .thumbnail{
+            height: 0;
+            padding-top: 80%;
+            margin-bottom: 10px;
+            background-color: theme-color(grey);
+            background-size: cover;
+            background-position: center;
+            transition: .25s;
+        }
+
+        &:hover{
+            //text-decoration: underline;
+
+            .thumbnail{
+                opacity: .8;
+            }
+        }
     }
 }
 

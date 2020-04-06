@@ -6,7 +6,7 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    <section id="historyHeader">
+    <section id="submenuHeader">
       <div class="container"> 
         {!! wp_nav_menu(['theme_location' => 'history-menu', 'menu_class' => 'history-menu']) !!}
           <h1>{!! App::title() !!}</h1>

@@ -2,11 +2,11 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    <div class="container"> 
-      @include('partials.page-header')
+      @include('partials.resources-header')
 
       @if($data['photos'])
       <section >
+        <div class="container"> 
         <div class="row" id="lightgallery">
         @foreach ($data['photos'] as $photo)
             <a href="{{ $photo['url'] }}" class="col-md-4 photo">
@@ -15,9 +15,9 @@
             </a>
         @endforeach
       </div>
+    </div>
       </section>
       @endif
 
-    </div>
   @endwhile
 @endsection

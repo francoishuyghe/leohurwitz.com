@@ -2,11 +2,11 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-  <div class="container">
-    @include('partials.page-header')
+    @include('partials.resources-header')
 
     @if($all_interviews->have_posts())
     <section>
+      <div class="container">
       <div class="row movies-wrap">
     @while($all_interviews->have_posts()) @php($all_interviews->the_post())
       <div class="col-md-4 movie">
@@ -18,8 +18,8 @@
         </div>
     @endwhile
       </div>
+      </div>
     @php(wp_reset_postdata())
     @endif
-    </div>
   @endwhile
 @endsection

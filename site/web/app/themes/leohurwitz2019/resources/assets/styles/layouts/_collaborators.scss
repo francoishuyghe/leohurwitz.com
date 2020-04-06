@@ -1,0 +1,37 @@
+.single-collaborators{
+    header{
+        a{
+            text-decoration: none;
+            color: theme-color(grey);
+            
+            svg,
+            i{
+                transition: .25s;
+            }
+
+            &:hover{
+                svg,
+                i{
+                    transform: translateX(-10px);
+                }
+            }
+        }
+
+        h1{
+            margin-bottom: $grid-gutter;
+        }
+    }
+    
+
+    #workedOn{
+        margin-top: $grid-gutter;
+
+        h2{
+            margin-bottom: $grid-gutter / 2;
+        }
+
+        .movie{
+            @extend .col-md-6;
+        }
+    }
+}

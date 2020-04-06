@@ -1,6 +1,7 @@
 @foreach ($all_materials[0] as $cat)
     @if($cat->slug)
     <section id="allMaterials">
+        <div class="container">
         <h3>{{ $cat->name }}</h3>
         <ul>
         @while($all_materials[1][$cat->slug]->have_posts()) @php $all_materials[1][$cat->slug]->the_post() @endphp
@@ -13,6 +14,7 @@
             </li>
         @endwhile
         </ul>
+        </div>
     </section>
     @endif
 @endforeach

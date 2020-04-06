@@ -53,7 +53,7 @@
           @php $posts = $data['collaborators'] @endphp
           @if( $posts )
           <h5>Collaborators</h5>
-          <ul class="key-people">
+          <ul class="collaborators">
             @foreach( $posts as $p )
               <li>
                 <a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo get_the_title( $p->ID ); ?></a>
