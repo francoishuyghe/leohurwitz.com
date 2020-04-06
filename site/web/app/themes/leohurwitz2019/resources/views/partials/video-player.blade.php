@@ -12,9 +12,15 @@
     $vimeo_response = unserialize( $vimeo_response['body'] );
     $vimeo_url = $vimeo_response[0]['thumbnail_large'];
     }
-@endphp
 
-<div class="video-player" style="background-image: url({{ $vimeo_url }})">
+    if($vimeo_url) {
+        $thumbnail = $vimeo_url;
+    } else {
+        $thumbnail = get_the_post_thumbnail_url($post->ID, 'medium');
+    }
+@endphp
+{{ get_the_post_thumbnail($post->ID, 'medium') }}
+<div class="video-player" style="background-image: url({{ $thumbnail }})">
     <div class="video-btn"><i class="fas fa-play"></i></div>
     <div class="embed-container">
         {!! $video_embed !!}
