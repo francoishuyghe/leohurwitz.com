@@ -32,6 +32,7 @@ h2{
     font-family: miller-display, serif;
     font-weight: 100;
     font-size: 1.2em;
+    margin-bottom: $grid-gutter / 2;
 
     @include media-breakpoint-up(md){
       font-size: 1.7em;
@@ -93,11 +94,11 @@ section{
   .accordeon-header{
     cursor: pointer;
 
-    .up{
+    .down{
       display: none;
     }
     
-    .down{
+    .up{
       display: inline-block;
     }
   }
@@ -108,11 +109,11 @@ section{
 
   &.active{
     .accordeon-header{
-      .up{
+      .down{
         display: inline-block;
       }
       
-      .down{
+      .up{
         display: none;
       }
     }

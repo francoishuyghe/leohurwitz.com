@@ -21,7 +21,7 @@ class SingleInterview extends Controller
 		$data['links'] = get_field('links');
 		$data['collaborators'] = get_field('collaborators');
 		$data['photos'] = get_field('photos');
-		$data['film'] = get_field('film');
+		$data['main_video'] = get_field('main_video');
 	    return $data;
 	}
 }

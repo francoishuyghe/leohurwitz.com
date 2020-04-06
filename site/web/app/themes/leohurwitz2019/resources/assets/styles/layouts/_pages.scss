@@ -259,8 +259,41 @@
     }
 }
 
-//Photographs
-.photographs{
+//Printed Materials
+#allMaterials{
+    h3{
+        margin-bottom: $grid-gutter / 2;
+    }
+
+    ul{
+        li{
+            list-style: none;
+
+            svg, i{
+                margin-right: 10px;
+            }
+
+            .wp-block-file{
+                margin-bottom: 1em;
+                
+                a{
+                    text-decoration: none;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+
+                    &.wp-block-file__button{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }   
+}
+
+//Light Gallery
+#lightgallery{
     .photo{
         margin-bottom: $grid-gutter;
         text-align: center;

@@ -65,7 +65,7 @@
 
         @if($data['credits'])
         <div class="accordeon">
-          <div class="accordeon-header"><span class="down">See</span><span class="up">Hide</span> Full Credits</div>
+          <div class="accordeon-header"><span class="up">See</span><span class="down">Hide</span> Full Credits</div>
           <div class="accordeon-content">
             {!! $data['credits'] !!}
           </div>
@@ -82,11 +82,12 @@
           <section class="photo">
             <div class="container">
             <h2>Photos</h2>
-            <div class="row">
+            <div class="row" id="lightgallery">
               @foreach ($data['photos'] as $photo)
-                <div class="col-md-4">
-                  <img src="{{ $photo['url'] }}" />
-                </div>
+                <a href="{{ $photo['url'] }}" class="col-md-4 photo">
+                  <img src="{{ $photo['sizes']['medium'] }}" data-sub-html="{{ $photo['title'] }}" alt="{{ $photo['alt'] }}" />
+                  <figcaption>{{ $photo['title'] }}</figcaption>
+                </a>
               @endforeach
             </div>
             </div>

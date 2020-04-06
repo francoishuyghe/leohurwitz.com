@@ -1,14 +1,12 @@
 <article {!! post_class() !!}>
   <header class="movie-header">
-    @if( have_rows('media') )
+    @if( $data['main_video'] )
       <div class="container">
-        @while ( have_rows('media') ) @php the_row() @endphp
           @php 
-          $video_uri = get_sub_field('video', FALSE, FALSE);
-          $video_embed = get_sub_field('video'); 
+          $video_uri = get_field('main_video', FALSE, FALSE);
+          $video_embed = $data['main_video']; 
           @endphp
           @include('partials/video-player')
-        @endwhile
       </div>
     </section>
     @endif
@@ -55,6 +53,8 @@
       </div>
     </section>
 
+    @include('partials.single-movie-media')
+
     @if($data['full_transcript'])
         <section class="full-transcript">
           <div class="container">
@@ -64,7 +64,7 @@
                   <div class="col-6 accordeon">
                       <h3>{{ $section['section_title'] }}</h3>
                       <div class="accordeon-header">
-                      <span class="down">Read</span><span class="up">Hide</span> the full transcript
+                      <span class="up">Read</span><span class="down">Hide</span> the full transcript
                     </div>
                     <div class="accordeon-content">
                       {!! $section['section_body'] !!}
