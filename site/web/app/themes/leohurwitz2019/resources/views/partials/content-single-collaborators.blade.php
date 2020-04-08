@@ -1,6 +1,6 @@
 <article {!! post_class() !!}>
   <div class="container">
-  <header>
+  <header class="collaborator-header">
     <a href="/collaborators"><i class="far fa-arrow-left"></i> Back to all collaborators</a>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
   </header>
