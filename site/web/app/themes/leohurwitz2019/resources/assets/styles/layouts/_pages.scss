@@ -275,7 +275,7 @@
 
             .wp-block-file{
                 margin-bottom: 1em;
-                
+
                 a{
                     text-decoration: none;
 
@@ -300,10 +300,14 @@
         text-decoration: none;
 
         figcaption{
-            color: theme-color(grey);
+            color: theme-color(black);
             font-size: .8em;
             line-height: 1em;
             margin-top: 10px;
+
+            &:last-child{
+                color: theme-color(grey);
+            }
         }
     }
 }

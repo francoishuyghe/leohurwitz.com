@@ -12,6 +12,7 @@
             <a href="{{ $photo['url'] }}" class="col-md-4 photo">
               <img src="{{ $photo['sizes']['medium'] }}" data-sub-html="{{ $photo['title'] }}" alt="{{ $photo['alt'] }}" />
               <figcaption>{{ $photo['title'] }}</figcaption>
+              <figcaption>{{ $photo['caption'] }}</figcaption>
             </a>
         @endforeach
       </div>
