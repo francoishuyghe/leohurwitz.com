@@ -18,7 +18,18 @@
         <h2>Worked on</h2>
         <div class="row movies-wrap">
           @while($movies->have_posts()) @php $movies->the_post() @endphp
-            @include('partials.film-item')
+            @if(get_field('year_span'))
+              @php $dateDisplay = get_field('year_span'); @endphp
+            @else
+              @php $dateDisplay = get_field('year'); @endphp
+            @endif
+        
+            <div class="col-12">
+                <a href="{{ the_permalink() }}">
+                  <h4>{{ the_title() }}{{ the_field('subtitle') }}</h4>
+                  <h5>{{ $dateDisplay }}</h5>
+                </a>
+            </div>
           @endwhile
         </div>
       </section>

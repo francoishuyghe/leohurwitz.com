@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Collaborators &#8211; Leo Hurwitz</title>
+<meta name='robots' content='noindex,nofollow'/>
+<link rel='dns-prefetch' href='//s.w.org'/>
+<script>window._wpemojiSettings={"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/leohurwitz.test\/wp\/wp-includes\/js\/wp-emoji.js?ver=5.4","twemoji":"https:\/\/leohurwitz.test\/wp\/wp-includes\/js\/twemoji.js?ver=5.4"}};
+(function(window, document, settings){
+var src, ready, ii, tests;
+var canvas=document.createElement('canvas');
+var context=canvas.getContext&&canvas.getContext('2d');
+function emojiSetsRenderIdentically(set1, set2){
+var stringFromCharCode=String.fromCharCode;
+context.clearRect(0, 0, canvas.width, canvas.height);
+context.fillText(stringFromCharCode.apply(this, set1), 0, 0);
+var rendered1=canvas.toDataURL();
+context.clearRect(0, 0, canvas.width, canvas.height);
+context.fillText(stringFromCharCode.apply(this, set2), 0, 0);
+var rendered2=canvas.toDataURL();
+return rendered1===rendered2;
+}
+function browserSupportsEmoji(type){
+var isIdentical;
+if(! context||! context.fillText){
+return false;
+}
+context.textBaseline='top';
+context.font='600 32px Arial';
+switch(type){
+case 'flag':
+isIdentical=emojiSetsRenderIdentically(
+[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+);
+if(isIdentical){
+return false;
+}
+isIdentical=emojiSetsRenderIdentically(
+[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+);
+if(isIdentical){
+return false;
+}
+isIdentical=emojiSetsRenderIdentically(
+[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+);
+return ! isIdentical;
+case 'emoji':
+isIdentical=emojiSetsRenderIdentically(
+[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+);
+return ! isIdentical;
+}
+return false;
+}
+function addScript(src){
+var script=document.createElement('script');
+script.src=src;
+script.defer=script.type='text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+}
+tests=Array('flag', 'emoji');
+settings.supports={
+everything: true,
+everythingExceptFlag: true
+};
+for(ii=0; ii < tests.length; ii++){
+settings.supports[ tests[ ii ] ]=browserSupportsEmoji(tests[ ii ]);
+settings.supports.everything=settings.supports.everything&&settings.supports[ tests[ ii ] ];
+if('flag'!==tests[ ii ]){
+settings.supports.everythingExceptFlag=settings.supports.everythingExceptFlag&&settings.supports[ tests[ ii ] ];
+}}
+settings.supports.everythingExceptFlag=settings.supports.everythingExceptFlag&&! settings.supports.flag;
+settings.DOMReady=false;
+settings.readyCallback=function(){
+settings.DOMReady=true;
+};
+if(! settings.supports.everything){
+ready=function(){
+settings.readyCallback();
+};
+if(document.addEventListener){
+document.addEventListener('DOMContentLoaded', ready, false);
+window.addEventListener('load', ready, false);
+}else{
+window.attachEvent('onload', ready);
+document.attachEvent('onreadystatechange', function(){
+if('complete'===document.readyState){
+settings.readyCallback();
+}});
+}
+src=settings.source||{};
+if(src.concatemoji){
+addScript(src.concatemoji);
+}else if(src.wpemoji&&src.twemoji){
+addScript(src.twemoji);
+addScript(src.wpemoji);
+}}
+})(window, document, window._wpemojiSettings);</script>
+<style>img.wp-smiley,
+img.emoji{display:inline !important;border:none !important;box-shadow:none !important;height:1em !important;width:1em !important;margin:0 .07em !important;vertical-align:-0.1em !important;background:none !important;padding:0 !important;}</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://leohurwitz.test/wp/wp-includes/css/dist/block-library/style.css?ver=5.4' type='text/css' media='all'/>
+<link rel='stylesheet' id='sage/main.css-css' href='https://leohurwitz.test/app/themes/leohurwitz2019/dist/styles/main_720da218.css' type='text/css' media='all'/>
+<script type='text/javascript' src='https://leohurwitz.test/app/plugins/ewww-image-optimizer/includes/lazysizes-pre.js?ver=525.0'></script>
+<script>var eio_lazy_vars={"exactdn_domain":""};</script>
+<script type='text/javascript' src='https://leohurwitz.test/app/plugins/ewww-image-optimizer/includes/lazysizes.js?ver=525.0'></script>
+<script type='text/javascript' src='https://leohurwitz.test/app/plugins/ewww-image-optimizer/includes/lazysizes-post.js?ver=525.0'></script>
+<script type='text/javascript' src='https://leohurwitz.test/app/plugins/ewww-image-optimizer/includes/ls.unveilhooks.js?ver=525.0'></script>
+<script type='text/javascript' src='https://leohurwitz.test/wp/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://leohurwitz.test/wp/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://leohurwitz.test/wp-json/'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://leohurwitz.test/wp/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://leohurwitz.test/wp/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.4"/>
+<link rel="canonical" href="https://leohurwitz.test/collaborators/"/>
+<link rel='shortlink' href='https://leohurwitz.test/?p=879'/>
+<link rel="alternate" type="application/json+oembed" href="https://leohurwitz.test/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fleohurwitz.test%2Fcollaborators%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://leohurwitz.test/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fleohurwitz.test%2Fcollaborators%2F&#038;format=xml"/>
+<noscript><style>.lazyload[data-src]{display:none !important;}</style></noscript>
+<link rel="apple-touch-icon" sizes="57x57" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/apple-icon-57x57_ae338fe9.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/apple-icon-60x60_a2e538be.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/apple-icon-72x72_df1a40d0.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/apple-icon-76x76_b81c8ece.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/apple-icon-114x114_56898091.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/apple-icon-120x120_6b0b8992.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/apple-icon-144x144_0d70fd6b.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/apple-icon-152x152_bf2013d9.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/apple-icon-180x180_5fd225ef.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/android-icon-192x192_c80171ee.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/favicon-32x32_af288c5a.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/favicon-96x96_89f96970.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/favicon-16x16_9948cf1c.png">
+<link rel="manifest" href="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/manifest_b58fcfa7.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://leohurwitz.test/app/themes/leohurwitz2019/dist/images/favicon/ms-icon-144x144_0d70fd6b.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lg-transitions.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css"/>
+<script src="https://kit.fontawesome.com/ba9e3758fb.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.typekit.net/vac2ivs.css">
+</head>
+<body class="page-template page-template-template-resources-page template-resources-page page page-id-879 collaborators sidebar-primary app-data index-data singular-data page-data page-879-data page-collaborators-data">
+<header class="banner">
+<div class="top"> <button class="menu-text menu-toggle">MENU</button> <button class="hamburger menu-toggle hamburger--squeeze" type="button"> <span class="hamburger-box"> <span class="hamburger-inner"></span> </span> </button> <a class="brand" href="https://leohurwitz.test/">Leo Hurwitz</a></div><div class="bottom"> <div class="container"> <nav class="nav-primary"> <div class="menu-main-menu-container"><ul id="menu-main-menu" class="nav"><li id="menu-item-1088" class="inactive menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1088"><a href="#">History</a> <ul class="sub-menu"> <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="https://leohurwitz.test/why/">Why Leo?</a></li> <li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="https://leohurwitz.test/biography/">Biography</a></li> <li id="menu-item-893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-893"><a href="https://leohurwitz.test/repression/">Repression</a></li> <li id="menu-item-888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-888"><a href="https://leohurwitz.test/cinema-verite-and-the-young-fighter/">Cinema Verite and the Young Fighter</a></li> </ul> </li> <li id="menu-item-1329" class="inactive menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1329"><a href="#">Filmography</a> <ul class="sub-menu"> <li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="https://leohurwitz.test/films/">Films</a></li> </ul> </li> <li id="menu-item-1089" class="inactive menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1089"><a href="#">Resources</a> <ul class="sub-menu"> <li id="menu-item-896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-896"><a href="https://leohurwitz.test/interviews/">Video Interviews</a></li> <li id="menu-item-899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-899"><a href="https://leohurwitz.test/photographs/">Photographs</a></li> <li id="menu-item-933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-933"><a href="https://leohurwitz.test/printed-material/">Printed Material</a></li> <li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-879 current_page_item menu-item-880"><a href="https://leohurwitz.test/collaborators/" aria-current="page">Collaborators</a></li> </ul> </li> <li id="menu-item-1331" class="inactive menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1331"><a href="#">Other</a> <ul class="sub-menu"> <li id="menu-item-937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-937"><a href="https://leohurwitz.test/news/">News</a></li> <li id="menu-item-1330" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1330"><a href="https://leohurwitz.test/acknowledgements/">Acknowledgements</a></li> </ul> </li> </ul></div></nav></div></div></header>
+<div class="wrap" role="document"> <div class="content"> <main class="main"> <section id="submenuHeader"> <div class="container"> <div class="menu-resources-page-container"><ul id="menu-resources-page" class="resources-menu"><li id="menu-item-1594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1594"><a href="https://leohurwitz.test/interviews/">Video Interviews</a></li> <li id="menu-item-1592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1592"><a href="https://leohurwitz.test/photographs/">Photographs</a></li> <li id="menu-item-1593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1593"><a href="https://leohurwitz.test/printed-material/">Printed Material</a></li> <li id="menu-item-1595" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-879 current_page_item menu-item-1595"><a href="https://leohurwitz.test/collaborators/" aria-current="page">Collaborators</a></li> </ul></div><h1>Collaborators</h1></div></section>
+<section>
+<div class="container"> <div class="row"> <div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/lionel-berman/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151658/berman.jpg"></div><h4>Lionel Berman</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/marc-blitzstein/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013437/MarcBlitzstein.jpg"></div><h4>Marc Blitzstein</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/sam-brody/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151659/unnamed-Sam-Brody.jpg"></div><h4>Sam Brody</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/henri-cartier-bresson/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013018/HenriBresson.jpeg"></div><h4>Henri Cartier-Bresson</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/henry-cowell/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03155344/p05tdt7q-Henry-Cowell.jpg"></div><h4>Henry Cowell</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/howard-dasilva/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013020/HowardDaSilva.jpg"></div><h4>Howard DaSilva</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/mura-dehn/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151700/Mura.jpg"></div><h4>Mura Dehn</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/david-diamond/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03161332/maxresdefault-David-Diamond.jpg"></div><h4>David Diamond</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/alfred-drake/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03161030/download-Afred-Drake.jpeg"></div><h4>Alfred Drake</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/faith-elliot-hubley/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151658/unnamed-Faith-Elliot-Hubley.jpg"></div><h4>Faith Elliot–Hubley</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/tom-fleischman/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151655/unnamed-Tom-Fleishman.jpg"></div><h4>Tom Fleischman</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/peter-glushanok/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151657/unnamed-Peter-Glushanok.jpg"></div><h4>Peter Glushanok</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/tom-hurwitz/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03161527/MV5BNTA2MTMzNTY2Nl5BMl5BanBnXkFtZTgwMDYzNTUzMDI%40._V1-Tom-Hurwitz.jpg"></div><h4>Tom Hurwitz</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/fons-iannelli/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013018/FonsIanelli.jpg"></div><h4>Fons Iannelli</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/joris-ivens/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013139/LHWebSitePic-48.jpg"></div><h4>Joris Ivens</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/george-jacobson/"> <div class="thumbnail" style="background-image: url('');"></div><h4>George Jacobson</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/elia-kazan/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013017/EliaKazan.jpg"></div><h4>Elia Kazan</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/manfred-kirchheimer/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151657/unnamed-Manfred-Kirchheimer.jpg"></div><h4>Manfred Kirchheimer</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/herbert-kline/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013020/HerberKlineRightinSpain.jpg"></div><h4>Herbert Kline</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/peggy-lawson/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013335/LHWebSitePic-138.jpg"></div><h4>Peggy Lawson</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/irving-lerner/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151659/Lerner-photo.jpg"></div><h4>Irving Lerner</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/saul-levitt/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151700/268526%402x-Saul.jpg"></div><h4>Saul Levitt</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/pare-lorenz/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013439/PareLorentz.jpg"></div><h4>Pare Lorentz</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/ben-maddow/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013016/BenMaddow.jpg"></div><h4>Ben Maddow</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/thomas-mcgrath/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013443/TomMcGrath.jpg"></div><h4>Thomas McGrath</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/gary-merrill/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/07181436/GaryMerrill.jpg"></div><h4>Gary Merrill</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/sydney-meyers/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013140/LHWebSitePic-49.jpg"></div><h4>Sydney Meyers</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/tom-pedi/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151659/unnamed-Tom-Pedi.jpg"></div><h4>Tom Pedi</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/charles-pratt/"> <div class="thumbnail" style="background-image: url('');"></div><h4>Charles Pratt</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/paul-robeson/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013440/PaulRobison.jpg"></div><h4>Paul Robeson</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/edwin-rolf/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013017/EdwinRolfe.jpg"></div><h4>Edwin Rolf</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/barnett-l-rosset-jr/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151658/unnamed-Barney-Rossett.jpg"></div><h4>Barnett L. Rosset Jr.</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/leo-selzer/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151659/unnamed-Leo-Selzer.jpg"></div><h4>Leo Selzer</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/muriel-smith/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151657/unnamed-Muriel-Smith.jpg"></div><h4>Muriel Smith</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/art-smith/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/03151700/26467320_1465493412-Art-Smith.jpg"></div><h4>Art Smith</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/ralph-steiner/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013133/LHWebSitePic-45.jpg"></div><h4>Ralph Steiner</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/paul-strand/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013144/LHWebSitePic-52.jpg"></div><h4>Paul Strand</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/john-unterecker/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/04/07181439/Unterecker.png"></div><h4>John Unterecker</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/willard-van-dyke/"> <div class="thumbnail lazyload" data-bg="https://nyc3.digitaloceanspaces.com/leohurwitz/app/uploads/2020/02/25013135/LHWebSitePic-46.jpg"></div><h4>Willard Van Dyke</h4>
+</a></div><div class="person col-md-3"> <a href="https://leohurwitz.test/collaborators/dick-vorisek/"> <div class="thumbnail" style="background-image: url('');"></div><h4>Dick Vorisek</h4>
+</a></div></div></div></section>
+</main></div></div><footer class="content-info">
+<div class="container text-center"> &copy; 2020 Leo Hurwitz - <a href="mailto:info@leohurwitz.com">info@leohurwitz.com</a></div></footer>
+<script type='text/javascript' src='https://leohurwitz.test/app/themes/leohurwitz2019/dist/scripts/main_720da218.js'></script>
+<script type='text/javascript' src='https://leohurwitz.test/wp/wp-includes/js/wp-embed.js?ver=5.4'></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.88108205795288 seconds, on 02-04-20 9:49:31 -->
