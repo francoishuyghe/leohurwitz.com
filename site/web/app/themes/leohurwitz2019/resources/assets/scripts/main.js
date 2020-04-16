@@ -12,6 +12,7 @@ import aboutUs from './routes/about';
 import films from './routes/films';
 import single from './routes/single';
 import singleMovie from './routes/single-movie';
+import singleInterview from './routes/single-movie';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -24,6 +25,7 @@ const routes = new Router({
   single,
   films,
   singleMovie,
+  singleInterview,
 });
 
 // Load Events

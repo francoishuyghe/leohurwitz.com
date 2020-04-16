@@ -12,7 +12,7 @@
           <h1>{!! App::title() !!}</h1>
       </div>
     </section>
-    <section>
+    <section id="mainContent">
       <div class="container"> 
         @include('partials.content-page')
       </div>

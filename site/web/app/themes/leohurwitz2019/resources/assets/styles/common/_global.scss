@@ -60,9 +60,12 @@ p{
   margin-bottom: 1em;
 }
 
-a{
+a,
+a.wp-block-button__link{
   color: theme-color(black);
   text-decoration: underline;
+  background: transparent;
+  padding: 0;
 
   &:hover{
     color: theme-color(black);
@@ -124,6 +127,14 @@ section{
   }
 }
 
+figcaption{
+  color: theme-color(grey);
+  text-align: center;
+  font-size: .8em;
+  line-height: 1em;
+  margin-top: 10px;
+}
+
 // Text content
 .biography,
 .repression,
@@ -138,10 +149,18 @@ section{
           margin: 50px 0 25px;
         }
 
-        p,
-        ul{
+        p{
             @extend .col-md-6;
             padding-left: 0;
+        }
+
+        ul{
+          @extend .col-md-6;
+          padding-left: $grid-gutter / 2;
+
+          li{
+            padding-left: 10px;
+          }
         }
 
         h2{

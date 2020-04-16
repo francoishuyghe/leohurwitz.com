@@ -1,16 +1,6 @@
 <article {!! post_class() !!}>
-  <header class="movie-header">
-    @if( $data['main_video'] )
-      <div class="container">
-          @php 
-          $video_uri = get_field('main_video', FALSE, FALSE);
-          $video_embed = $data['main_video']; 
-          @endphp
-          @include('partials/video-player')
-      </div>
-    </section>
-    @endif
-  </header>
+  
+  @include('partials.movie-header')
   
   <div class="entry-content">
     <section id="content">

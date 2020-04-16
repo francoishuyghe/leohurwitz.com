@@ -12,6 +12,12 @@ export default {
       $('.banner').toggleClass('active');
     })
 
+    //Open all links in new tab
+    $(document.links)
+      .filter(function () { return this.hostname != window.location.hostname; })
+      .attr('target', '_blank')
+      .attr('rel', 'noopener');
+
     //Accordeons
     $('.accordeon-header').click(function () {
       $(this).parent('.accordeon').toggleClass('active');
