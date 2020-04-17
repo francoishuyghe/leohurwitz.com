@@ -263,6 +263,7 @@
 #allMaterials{
     h3{
         margin-bottom: $grid-gutter / 2;
+        font-weight: bold;
     }
 
     ul{
@@ -271,6 +272,10 @@
 
             svg, i{
                 margin-right: 10px;
+            }
+
+            .accordeon-content{
+                padding: 10px 0  0 25px;
             }
 
             .wp-block-file{

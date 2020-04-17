@@ -28,7 +28,7 @@
           <ul class="collaborators">
             @foreach( $posts as $p )
               <li>
-                <a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo get_the_title( $p->ID ); ?></a>
+                <a href="{{ get_permalink( $p ) }}">{{ get_the_title( $p ) }}</a>
               </li>
 	        @endforeach
 	        </ul>
