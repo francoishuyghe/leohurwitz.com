@@ -165,18 +165,34 @@ figcaption{
 
         h2{
             @extend .col-md-12;
+            margin: $grid-gutter * 2 0 $grid-gutter;
         }
 
-        .wp-block-image{
-            @extend .col-md-6;
-            float: right;
-            text-align: right;
+        .wp-block-columns{
+          margin: $grid-gutter auto;
         }
 
-        .wp-block-quote,
-        .wp-block-embed{
+        .container > .wp-block-image{
             @extend .col-md-6;
             float: right;
+            text-align: center;
+            padding-left: $grid-gutter;
+
+            img{
+              max-height: 500px;
+              width: auto;
+            }
+
+            figcaption{
+              display: block;
+            }
+        }
+
+        .container > .wp-block-quote,
+        .container > .wp-block-embed{
+            @extend .col-md-6;
+            float: right;
+            padding-left: $grid-gutter;
 
             p{
               max-width: 100%;
