@@ -5,10 +5,26 @@
       @include('partials.resources-header')
 
       @if($data['photos'])
-      <section >
+      <section id="photoGallery">
         <div class="container"> 
         <div class="row" id="lightgallery">
         @foreach ($data['photos'] as $photo)
+            <a href="{{ $photo['url'] }}" class="col-md-4 photo">
+              <img src="{{ $photo['sizes']['medium'] }}" data-sub-html="{{ $photo['title'] }}" alt="{{ $photo['alt'] }}" />
+              <figcaption>{{ $photo['title'] }}</figcaption>
+              <figcaption>{{ $photo['caption'] }}</figcaption>
+            </a>
+        @endforeach
+      </div>
+    </div>
+      </section>
+      @endif
+      
+      @if($data['documents'])
+      <section id="documentsGallery">
+        <div class="container"> 
+        <div class="row" id="lightgallery">
+        @foreach ($data['documents'] as $photo)
             <a href="{{ $photo['url'] }}" class="col-md-4 photo">
               <img src="{{ $photo['sizes']['medium'] }}" data-sub-html="{{ $photo['title'] }}" alt="{{ $photo['alt'] }}" />
               <figcaption>{{ $photo['title'] }}</figcaption>
