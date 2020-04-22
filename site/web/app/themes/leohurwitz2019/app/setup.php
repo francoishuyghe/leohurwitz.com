@@ -132,3 +132,29 @@ add_action('after_setup_theme', function () {
 });
 
 
+// Add Guthenberg block
+
+add_action('acf/init', function () {
+	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		// register a testimonial block
+		acf_register_block(array(
+			'name'				=> 'Photo Carousel',
+			'title'				=> __('Carousel'),
+			'description'		=> __('A carousel of photographs.'),
+			'render_callback'	=> function ( $block ) {
+                $slug = str_replace('acf/', '', $block['name']);
+                echo \App\template("blocks/${slug}", ['block' => $block]);
+            },
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'carousel', 'photo' ),
+		));
+	}
+});
+
+
+
+

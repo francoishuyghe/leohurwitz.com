@@ -1,3 +1,0 @@
-<div>
-    Carousel test
-</div>
