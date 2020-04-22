@@ -15,7 +15,7 @@
     //     }
     // } else {
     // }
-    $thumbnail = get_the_post_thumbnail_url($post->ID, 'medium');
+    $thumbnail = get_the_post_thumbnail_url($post->ID, 'full');
     @endphp
 
 <div class="video-player" style="background-image: url({{ $thumbnail }})">
