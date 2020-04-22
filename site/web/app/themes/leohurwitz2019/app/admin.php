@@ -28,3 +28,32 @@ add_action('customize_preview_init', function () {
     register_nav_menu('history-menu',__( 'History Pages' ));
     register_nav_menu('resources-menu',__( 'Resources Pages' ));
   } );
+
+add_action('acf/init', function () {
+	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		// register a testimonial block
+		acf_register_block(array(
+			'name'				=> 'Photo Carousel',
+			'title'				=> __('Carousel'),
+			'description'		=> __('A carousel of photographs.'),
+			'render_callback'	=> 'carousel_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'carousel', 'photo' ),
+		));
+	}
+});
+
+function carousel_render_callback( $block ) {
+	
+	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
+	$slug = str_replace('acf/', '', $block['name']);
+	
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists( get_theme_file_path("/partials/block/content-{$slug}.php") ) ) {
+		include( get_theme_file_path("/partials/block/content-{$slug}.php") );
+	}
+}
