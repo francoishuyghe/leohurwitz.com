@@ -206,11 +206,20 @@ figcaption{
           margin: $grid-gutter 0;
           text-align: center;
 
+          @include media-breakpoint-up(lg){
+            margin: 0;
+          }
+
           img{
             max-height: 500px;
             width: auto;
           }
 
+          &.no-limit{
+            img{
+              max-height: none;
+            }
+          }
       }
 
         ul{
