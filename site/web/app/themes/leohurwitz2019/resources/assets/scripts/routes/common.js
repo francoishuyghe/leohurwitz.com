@@ -34,5 +34,14 @@ export default {
       subHtmlSelectorRelative: true,
       getCaptionFromTitleOrAlt: false,
     }); 
+    
+    $('.wp-block-image').lightGallery({
+      thumbnail: false,
+      share: false,
+      controls: false,
+      autoplay: false,
+      subHtmlSelectorRelative: true,
+      getCaptionFromTitleOrAlt: false,
+    }); 
   },
 };

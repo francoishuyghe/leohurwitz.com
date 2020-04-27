@@ -82,7 +82,7 @@
     letter-spacing: .1em;
     color: theme-color(black);
     font-weight: 400;
-    text-decoration: none;
+    @extend .no-underline;
   }
 
   &.active{
@@ -111,9 +111,9 @@
       flex: 1;
       margin-bottom: $grid-gutter/ 2;
       
-      &> a{
+      & > a{
         display: inline-block;
-        margin-bottom: 10px;
+        margin-bottom: 1em;
         font-weight: bold;
       }
 
@@ -122,7 +122,7 @@
           pointer-events: none;
 
           &:hover{
-            text-decoration: none;
+            @extend .no-underline;
           }
         }
       }
@@ -137,14 +137,15 @@
         text-transform: none;
         margin-bottom: 10px;
 
-        &.current-menu-item{
+        a{
+          line-height: 1.2em;
+        }
+
+        &.current-menu-item,
+        &:hover{
           a{
             text-decoration: underline;
           }
-        }
-
-        &:hover{
-          text-decoration: underline;
         }
       }
     }

@@ -62,14 +62,17 @@ p{
 
 a,
 a.wp-block-button__link{
+  @extend .underline;
+
   color: theme-color(black);
-  text-decoration: underline;
   background: transparent;
   padding: 0;
+
 
   &:hover{
     color: theme-color(black);
     text-decoration: none;
+    border-color: theme-color(grey);
   }
 }
 
@@ -342,7 +345,7 @@ figcaption{
     .slide{
       padding: $grid-gutter / 2;
       text-align: center;
-      text-decoration: none;
+      @extend .no-underline;
 
       img{
         margin: auto;

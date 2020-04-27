@@ -76,7 +76,7 @@
                 display: flex;
                 justify-content: space-between;
                 color: theme-color(black);
-                text-decoration: none;
+                @extend .no-underline;
 
                 svg{
                     transition: .25s;
@@ -98,8 +98,7 @@
 }
 
 // History and Resources Pages
-.template-history-page,
-.template-resources-page{
+
     #submenuHeader{
         padding-bottom: 0;
 
@@ -121,6 +120,16 @@
         .resources-menu{
             display: none;
 
+            li{
+                a{
+                    @extend .no-underline;
+
+                    &:hover{
+                        @extend .underline;
+                    }
+                }
+            }
+
             @include media-breakpoint-up(lg){
                 display: block;
                 padding-left: 0;
@@ -132,14 +141,6 @@
                     list-style: none;
                     padding-right: $grid-gutter / 2;
                     margin-bottom: 0;
-                    
-                    a{
-                        text-decoration: none;
-                        
-                        &:hover{
-                            text-decoration: underline;
-                        }
-                    }
                 }
                 
                 .current-menu-item{
@@ -149,6 +150,7 @@
         }
     }
 
+.template-history-page{
     .wp-block-quote{
      &:last-child{
          @include media-breakpoint-up(lg){
@@ -203,7 +205,7 @@
         }
 
         a{
-            text-decoration: none;
+            @extend .no-underline;
 
             &:hover{
                 .thumbnail{
@@ -257,7 +259,8 @@
     text-align: left;
 
     a{
-        text-decoration: none;
+        @extend .no-underline;
+        display: block;
 
         .thumbnail{
             height: 0;
@@ -302,10 +305,10 @@
                 margin-bottom: 1em;
 
                 a{
-                    text-decoration: none;
+                    @extend .no-underline;
 
                     &:hover{
-                        text-decoration: underline;
+                        @extend .underline;
                     }
 
                     &.wp-block-file__button{
@@ -328,7 +331,7 @@
     .photo{
         margin-bottom: $grid-gutter;
         text-align: center;
-        text-decoration: none;
+        @extend .no-underline;
 
         figcaption{
             color: theme-color(black);

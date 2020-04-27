@@ -11,6 +11,19 @@ $theme-colors: (
 
 $grid-gutter: 50px;
 
+//Underline
+.underline {
+  border-bottom: 1px solid currentColor;
+  display: inline-block;
+  line-height: 0.75;
+}
+
+.no-underline{
+  display: inline-block;
+  line-height: 0.75;
+  border-bottom: 1px solid transparent;
+}
+
 //fonts
 
 @font-face {

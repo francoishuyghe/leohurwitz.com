@@ -17,7 +17,6 @@
         @include('partials.content-page')
       </div>
     </section>
-    
   @endwhile
 @endsection
 

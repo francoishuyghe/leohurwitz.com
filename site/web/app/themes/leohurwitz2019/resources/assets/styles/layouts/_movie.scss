@@ -128,10 +128,10 @@
                 list-style: none;
 
                 a{
-                    text-decoration: none;
+                    @extend .no-underline;
 
                     &:hover{
-                        text-decoration: underline;
+                        @extend .underline;
                     }
                 }
             }
@@ -155,7 +155,7 @@
         }
 
         &:hover{
-            text-decoration: none;
+            @extend .no-underline;
         }
 
         @include media-breakpoint-up(md){

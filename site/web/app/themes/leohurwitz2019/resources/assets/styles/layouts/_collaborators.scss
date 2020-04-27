@@ -1,7 +1,7 @@
 .single-collaborators{
     header.collaborator-header{
         a{
-            text-decoration: none;
+            @extend .no-underline;
             color: theme-color(grey);
             
             svg,
@@ -28,10 +28,6 @@
 
         h2{
             margin-bottom: $grid-gutter / 2;
-        }
-
-        .movie{
-            @extend .col-md-6;
         }
     }
 }

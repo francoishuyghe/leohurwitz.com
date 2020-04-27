@@ -4,10 +4,10 @@ footer{
     font-size: .8em;
 
     a{
-        text-decoration: none;
+        @extend .no-underline;
 
         &:hover{
-            text-decoration: underline;
+            @extend .underline;
         }
     }
 }
