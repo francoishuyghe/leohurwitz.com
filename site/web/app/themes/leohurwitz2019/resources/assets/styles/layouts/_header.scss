@@ -106,10 +106,10 @@
     & > li{
       list-style: none;
       font-size: 1.2em;
-      
       text-transform: uppercase;
       padding-right: $grid-gutter;
       flex: 1;
+      margin-bottom: $grid-gutter/ 2;
       
       &> a{
         display: inline-block;
@@ -136,6 +136,12 @@
         font-size: 1em;
         text-transform: none;
         margin-bottom: 10px;
+
+        &.current-menu-item{
+          a{
+            text-decoration: underline;
+          }
+        }
 
         &:hover{
           text-decoration: underline;

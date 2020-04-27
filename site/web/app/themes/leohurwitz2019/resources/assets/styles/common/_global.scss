@@ -84,7 +84,11 @@ section{
 
 .wp-block-quote{
   font-family: miller-display, serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
+
+  @include media-breakpoint-up(md){
+    font-size: 1.5em;
+  }
 }
 
 .hidden{
@@ -149,20 +153,67 @@ figcaption{
 .cinema-verite-and-the-young-fighter,
 .single-post{
         main{
+          // Lets us reorder the elements
+          @include media-breakpoint-down(md){
+            .container{
+              display: flex;
+              flex-direction: column;
+              padding: 0;
 
-        h1, h2, h3, h4{
-          @extend .col-md-12;
-          padding-left: 0;
-          margin: 50px 0 25px;
+              & > * {
+                order: 4;
+              }
+            }
+          }
+
+          h1, h3, h4{
+            margin: 50px 0 25px;
+          }
+
+          h2{
+            margin: $grid-gutter * 2 0 $grid-gutter;
+
+            &:first-child{
+              margin-top: 0;
+            }
+          }
+
+        .wp-block-quote{
+          margin: $grid-gutter 0 $grid-gutter / 2;
+
+          p{
+            border-top: 2px solid theme-color(black);
+            padding: 0;
+            padding-top: $grid-gutter / 2;
+            max-width: 100%;
+          }
+          
+          &:first-child{
+            margin-top: 0;
+          }
+
+
+          @include media-breakpoint-down(md){
+            &:first-child{
+              p{
+                border-top: 0;
+              }
+            }
+          }
         }
 
-        p{
-            @extend .col-md-6;
-            padding-left: 0;
-        }
+        .wp-block-image{
+          margin: $grid-gutter 0;
+          text-align: center;
+
+          img{
+            max-height: 500px;
+            width: auto;
+          }
+
+      }
 
         ul{
-          @extend .col-md-6;
           padding-left: $grid-gutter / 2;
 
           li{
@@ -170,10 +221,25 @@ figcaption{
           }
         }
 
+        @include media-breakpoint-up(lg){
+
+        h1, h2, h3, h4{
+          @extend .col-lg-12;
+          padding-left: 0;
+        }
+
+        p{
+            @extend .col-lg-6;
+            padding-left: 0;
+        }
+
+        ul{
+          @extend .col-lg-6;
+        }
+
         h2{
-            @extend .col-md-12;
+            @extend .col-lg-12;
             max-width: 90%;
-            margin: $grid-gutter * 2 0 $grid-gutter;
         }
 
         .wp-block-columns{
@@ -181,35 +247,60 @@ figcaption{
         }
 
         .container > .wp-block-image{
-            @extend .col-md-6;
+            @extend .col-lg-6;
             float: right;
             text-align: center;
             padding-left: $grid-gutter;
 
             img{
-              max-height: 500px;
-              width: auto;
-            }
-
-            figcaption{
-              display: block;
+              margin: 0;
             }
         }
 
         .container > .wp-block-quote,
         .container > .wp-block-embed{
-            @extend .col-md-6;
+            @extend .col-lg-6;
             float: right;
             padding-left: $grid-gutter;
-
-            p{
-              border-top: 2px solid theme-color(black);
-              padding-top: $grid-gutter / 2;
-              max-width: 100%;
-            }
+            margin: 0;
         }
         }
+      }
     }
+
+//Repression
+.repression{
+  @include media-breakpoint-down(md){
+    .container{
+      & > *:nth-child(1){
+        order: 2;
+      }
+
+      & > *:nth-child(2){
+        order: 1;
+      }
+    }
+  }
+}
+
+//Biography
+.biography{
+  @include media-breakpoint-down(md){
+    .container{
+      & > *:nth-child(1){
+        order: 1;
+      }
+
+      & > *:nth-child(2){
+        order: 3;
+      }
+      
+      & > *:nth-child(3){
+        order: 2;
+      }
+    }
+  }
+}
 
 // VIDEOS
 .wp-block-embed-vimeo .wp-block-embed__wrapper,

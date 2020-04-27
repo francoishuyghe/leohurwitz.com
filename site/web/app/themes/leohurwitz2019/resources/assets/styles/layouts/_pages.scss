@@ -101,40 +101,60 @@
 .template-history-page,
 .template-resources-page{
     #submenuHeader{
-        border-bottom: 1px solid theme-color(black);
         padding-bottom: 0;
-        margin-top: - $grid-gutter / 2;
 
         h1{
-            margin-bottom: $grid-gutter;
+            margin: 0;
             line-height: 1;
+        }
+        
+        @include media-breakpoint-up(lg){
+            margin-top: - $grid-gutter / 2;
+            border-bottom: 1px solid theme-color(black);
+
+            h1{
+                margin: $grid-gutter 0;
+            }
         }
 
         .history-menu,
         .resources-menu{
-            padding-left: 0;
-            max-width: 100%;
-            margin-bottom: $grid-gutter;
+            display: none;
 
-            li{
-                display: inline-block;
-                list-style: none;
-                padding-right: $grid-gutter / 2;
-                margin-bottom: 0;
-
-                a{
-                    text-decoration: none;
-
-                    &:hover{
-                        text-decoration: underline;
+            @include media-breakpoint-up(lg){
+                display: block;
+                padding-left: 0;
+                max-width: 100%;
+                margin-bottom: $grid-gutter;
+                
+                li{
+                    display: inline-block;
+                    list-style: none;
+                    padding-right: $grid-gutter / 2;
+                    margin-bottom: 0;
+                    
+                    a{
+                        text-decoration: none;
+                        
+                        &:hover{
+                            text-decoration: underline;
+                        }
                     }
                 }
-            }
-
-            .current-menu-item{
-                opacity: .4;
+                
+                .current-menu-item{
+                    opacity: .4;
+                }
             }
         }
+    }
+
+    .wp-block-quote{
+     &:last-child{
+         @include media-breakpoint-up(lg){
+            margin-top: -400px;
+        }
+     }   
     }
 }
 
