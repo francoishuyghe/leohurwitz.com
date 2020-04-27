@@ -17,10 +17,13 @@
           <p>A film by @if($data['directed_by']){{ $data['directed_by'] }} @else Leo Hurwitz @endif</p>
           <h5>Year</h5>
           <p>@if($data['year_span']) {{ $data['year_span'] }} @else {{ $data['year'] }} @endif</p>
+          
           <h5>Runtime</h5>
           <p>@if($data['length']) {{ $data['length'] }} minutes @else N/A @endif @if($data['surviving'])(surviving)@endif</p> 
+          
           <h5>Format</h5>
           <p>{{ $data['format'] }}</p>
+
           @php $posts = $data['collaborators'] @endphp
           @if( $posts )
           <h5>Key People</h5>
