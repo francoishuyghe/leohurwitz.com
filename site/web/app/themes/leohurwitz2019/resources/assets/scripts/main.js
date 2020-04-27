@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import films from './routes/films';
 import single from './routes/single';
+import page from './routes/page';
 import singleMovie from './routes/single-movie';
 import singleInterview from './routes/single-movie';
 
@@ -23,6 +24,7 @@ const routes = new Router({
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
   single,
+  page,
   films,
   singleMovie,
   singleInterview,

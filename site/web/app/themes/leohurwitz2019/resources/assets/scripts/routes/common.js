@@ -27,9 +27,11 @@ export default {
     // JavaScript to be fired on all pages, after page specific JS is fired
 
     //Light Gallery
-    $('#lightgallery').lightGallery({
+    $('.lightgallery .gallery, .lightgallery .slick-track').lightGallery({
       thumbnail: true,
       share: false,
+      autoplay: false,
+      subHtmlSelectorRelative: true,
       getCaptionFromTitleOrAlt: false,
     }); 
   },

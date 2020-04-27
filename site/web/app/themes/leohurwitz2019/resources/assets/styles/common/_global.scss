@@ -132,7 +132,14 @@ figcaption{
   text-align: center;
   font-size: .8em;
   line-height: 1em;
-  margin-top: 10px;
+  padding-top: 10px;
+
+  strong{
+    display: inline-block;
+    color: theme-color(darkgrey);
+    font-weight: 400;
+    padding-bottom: 5px;
+  }
 }
 
 // Text content
@@ -225,6 +232,38 @@ figcaption{
   &.wp-embed-aspect-4-3{
     .wp-block-embed__wrapper{
     padding-top: 75%;
+    }
+  }
+}
+
+//Carousels
+.wp-block-carousel{
+  .slides{
+    .slide{
+      padding: $grid-gutter / 2;
+      text-align: center;
+      text-decoration: none;
+
+      img{
+        margin: auto;
+      }
+
+      .caption{
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+.lg-sub-html{
+  background-color: rgba(0,0,0,.8);
+
+  figcaption{
+    font-size: 1em;
+
+    strong{
+      color: theme-color(white);
+      font-size: 1.2em;
     }
   }
 }
