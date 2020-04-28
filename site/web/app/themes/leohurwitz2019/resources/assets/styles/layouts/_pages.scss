@@ -145,6 +145,11 @@
                 
                 .current-menu-item{
                     opacity: .4;
+                    pointer-events: none;
+
+                    &:hover{
+                        border-color: transparent;
+                    }
                 }
             }
         }

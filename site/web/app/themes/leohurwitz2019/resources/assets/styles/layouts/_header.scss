@@ -83,6 +83,10 @@
     color: theme-color(black);
     font-weight: 400;
     @extend .no-underline;
+
+    &:hover{
+      border-color: transparent;
+    }
   }
 
   &.active{
