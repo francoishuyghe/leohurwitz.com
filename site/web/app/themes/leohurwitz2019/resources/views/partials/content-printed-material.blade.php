@@ -1,7 +1,7 @@
+<section id="allMaterials">
+    <div class="container">
 @foreach ($all_materials[0] as $cat)
     @if($cat->slug)
-    <section id="allMaterials">
-        <div class="container">
         <h3>{{ $cat->name }}</h3>
         <ul>
         @while($all_materials[1][$cat->slug]->have_posts()) @php $all_materials[1][$cat->slug]->the_post() @endphp
@@ -16,8 +16,15 @@
                 </a>
             </li>
         @endwhile
-        </ul>
-        </div>
-    </section>
+    </ul>
     @endif
-@endforeach
+    @endforeach
+    
+    <h3>FBI Files</h3>
+    <ul>
+        <li>
+            <h4><a href="/fbi-files">Pages from Leo Hurwitz's FBI files</a></h4>
+        </li>
+    </ul>
+</div>
+</section>
