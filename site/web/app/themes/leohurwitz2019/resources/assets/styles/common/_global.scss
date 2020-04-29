@@ -136,8 +136,8 @@ section{
 
 figcaption{
   color: theme-color(grey);
-  text-align: center;
-  font-size: .8em;
+  display: block!important;
+  font-size: .7em;
   line-height: 1em;
   padding-top: 10px;
 
@@ -207,7 +207,7 @@ figcaption{
 
         .wp-block-image{
           margin: $grid-gutter 0;
-          text-align: center;
+          //text-align: center;
 
           @include media-breakpoint-up(lg){
             margin: 0;
@@ -261,7 +261,7 @@ figcaption{
         .container > .wp-block-image{
             @extend .col-lg-6;
             float: right;
-            text-align: center;
+            //text-align: center;
             padding-left: $grid-gutter;
 
             img{
@@ -322,12 +322,6 @@ figcaption{
   }
 }
 
-//Slick Carousel
-.slick-next:before, 
-.slick-prev:before{
-  color: theme-color(grey)!important;
-}
-
 // VIDEOS
 .wp-block-embed-vimeo .wp-block-embed__wrapper,
 .embed-container{
@@ -370,8 +364,16 @@ figcaption{
       }
     }
   }
+
+  .slick-next:before, 
+  .slick-prev:before{
+    color: theme-color(grey)!important;
+    font-size: 30px;
+  }
 }
 
+
+// LightGallery
 .lg-sub-html{
   background-color: rgba(0,0,0,.8);
 
@@ -383,4 +385,7 @@ figcaption{
       font-size: 1.2em;
     }
   }
+}
+#lg-download{
+  border-color: transparent;
 }

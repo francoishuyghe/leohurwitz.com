@@ -51,17 +51,14 @@
     }
 
     .photo{
-        text-align: center;
         margin-bottom: $grid-gutter / 2;
 
         img{
             width: 100%;
-            //max-width: none; 
         }
 
         @include media-breakpoint-up(md){
             margin-bottom: $grid-gutter;
-            //padding: 0 $grid-gutter;
         }
     }
 
@@ -176,6 +173,7 @@
     }
 
     .sort-options{
+        font-size: .8em;
         text-transform: uppercase;
 
         a{
@@ -329,17 +327,27 @@
 }
 
 // Photographs page
-    #documentsGallery{
-        border-top: 1px solid theme-color(black);
-        padding-top: $grid-gutter;
+#photoGallery{
+    .gallery{
+        display: flex;
+        justify-content: center;
+
+        .photo{
+            display: block;
+
+        }
     }
+}
 
 //Light Gallery
 .lightgallery{
     .photo{
         margin-bottom: $grid-gutter;
-        text-align: center;
         @extend .no-underline;
+
+        img{
+            width: 100%;
+        }
 
         figcaption{
             color: theme-color(black);
