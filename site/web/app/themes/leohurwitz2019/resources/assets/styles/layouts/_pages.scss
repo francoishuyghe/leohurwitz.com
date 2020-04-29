@@ -79,6 +79,7 @@
                 @extend .no-underline;
 
                 svg{
+                    font-size: 40px;
                     transition: .25s;
                 }
 
@@ -181,6 +182,7 @@
             color: theme-color(grey);
             cursor: pointer;
             padding-left: 10px;
+            border-color: transparent;
 
             &.active{
                 color: theme-color(black);

@@ -314,6 +314,20 @@ figcaption{
   }
 }
 
+//Images
+.wp-block-image{
+  a{
+    border-color: transparent;
+    cursor: zoom-in;
+  }
+}
+
+//Slick Carousel
+.slick-next:before, 
+.slick-prev:before{
+  color: theme-color(grey);
+}
+
 // VIDEOS
 .wp-block-embed-vimeo .wp-block-embed__wrapper,
 .embed-container{

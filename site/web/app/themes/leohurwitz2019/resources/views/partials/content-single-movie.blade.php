@@ -50,14 +50,18 @@
         @include('partials.single-movie-media')
 
         @if($data['photos'])
-          <section class="photo">
+          <section class="photo lightgallery">
             <div class="container">
             <h2>Photos</h2>
-            <div class="row" id="lightgallery">
+            <div class="row gallery">
               @foreach ($data['photos'] as $photo)
-                <a href="{{ $photo['url'] }}" class="col-md-4 photo">
+                <a href="{{ $photo['url'] }}" class="col-md-4 photo" data-sub-html=".caption">
                   <img src="{{ $photo['sizes']['medium'] }}" data-sub-html="{{ $photo['title'] }}" alt="{{ $photo['alt'] }}" />
-                  <figcaption>{{ $photo['title'] }}</figcaption>
+                  <div class="caption">
+                  <figcaption>
+                    <strong>{{ $photo['title'] }}</strong><br />{{ $photo['caption'] }}
+                  </figcaption>
+                  </div>
                 </a>
               @endforeach
             </div>

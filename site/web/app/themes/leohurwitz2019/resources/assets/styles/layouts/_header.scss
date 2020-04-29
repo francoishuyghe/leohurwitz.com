@@ -17,6 +17,10 @@
     align-items: center;
     justify-content: center;
 
+    .brand{
+      font-weight: 600;
+    }
+
     .menu-toggle{
       position: absolute;
       font-size: 1em;
@@ -79,7 +83,7 @@
   a{
     font-weight: 600;
     font-size: 1.2em;
-    letter-spacing: .1em;
+    letter-spacing: .05em;
     color: theme-color(black);
     font-weight: 400;
     @extend .no-underline;

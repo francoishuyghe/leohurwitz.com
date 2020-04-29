@@ -27,9 +27,10 @@
 	 //Carousel
    $('.slides').slick({
             slidesToShow: 3,
+            arrows: true,
             //centerPadding: '50px',
-            prevArrow: '.prevArrow',
-            nextArrow: '.nextArrow',
+            // prevArrow: '.prevArrow',
+            // nextArrow: '.nextArrow',
             responsive: [
             {
                 breakpoint: 768,
@@ -41,8 +42,7 @@
             {
                 breakpoint: 480,
                 settings: {
-                centerMode: false,
-                centerPadding: '20px',
+                  slidesToShow: 1,
                 },
             },
             ],

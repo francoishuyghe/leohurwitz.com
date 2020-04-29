@@ -6,7 +6,9 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
-    <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
+    <a class="brand" href="{{ home_url('/') }}">
+      {{ get_bloginfo('name', 'display') }}
+    </a>
   </div>
   <div class="bottom">
     <div class="container">

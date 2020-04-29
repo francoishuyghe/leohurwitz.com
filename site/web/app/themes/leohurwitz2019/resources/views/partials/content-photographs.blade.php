@@ -19,8 +19,8 @@
       
       @if($data['documents'])
       <section id="documentsGallery" class="lightgallery">
-        <h2> {{ $data['documents_title'] }}</h2>
         <div class="container"> 
+          <h2> {{ $data['documents_title'] }}</h2>
         <div class="row gallery">
         @foreach ($data['documents'] as $photo)
             <a href="{{ $photo['url'] }}" data-sub-html=".caption" class="col-md-4 photo">
