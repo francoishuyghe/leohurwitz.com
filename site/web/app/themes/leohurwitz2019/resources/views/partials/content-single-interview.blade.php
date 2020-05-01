@@ -14,7 +14,9 @@
           {!! the_content() !!}
         </div>
         <div class="col-md-3 offset-md-1">
-          <p>A film by @if($data['directed_by']){{ $data['directed_by'] }} @else Leo Hurwitz @endif</p>
+          <p>
+            @if($data['directed_by']){{ $data['directed_by'] }} @else Leo Hurwitz @endif
+          </p>
           <h5>Year</h5>
           <p>@if($data['year_span']) {{ $data['year_span'] }} @else {{ $data['year'] }} @endif</p>
           
