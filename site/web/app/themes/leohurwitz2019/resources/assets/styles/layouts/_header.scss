@@ -18,6 +18,8 @@
     justify-content: center;
 
     .brand{
+      @extend .no-underline;
+      font-size: 1.2em;
       font-weight: 600;
     }
 
@@ -80,19 +82,6 @@
     transition: .25s;
   }
 
-  a{
-    font-weight: 600;
-    font-size: 1.2em;
-    letter-spacing: .05em;
-    color: theme-color(black);
-    font-weight: 400;
-    @extend .no-underline;
-
-    &:hover{
-      border-color: transparent;
-    }
-  }
-
   &.active{
     .bottom{
       height: 100vh;
@@ -110,6 +99,15 @@
     padding: 0;
     font-size: .7em;
     padding-top: $grid-gutter / 2;
+
+    a{
+      font-weight: 600;
+      font-size: 1.2em;
+      letter-spacing: .05em;
+      color: theme-color(black);
+      font-weight: 400;
+      @extend .inverted-underline;
+    }
 
     & > li{
       list-style: none;
@@ -152,7 +150,7 @@
         &.current-menu-item,
         &:hover{
           a{
-            text-decoration: underline;
+            @extend .underline;
           }
         }
       }

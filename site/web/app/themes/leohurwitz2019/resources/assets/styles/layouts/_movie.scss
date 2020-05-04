@@ -128,11 +128,7 @@
                 list-style: none;
 
                 a{
-                    @extend .no-underline;
-
-                    &:hover{
-                        @extend .underline;
-                    }
+                    @extend .inverted-underline;
                 }
             }
 
