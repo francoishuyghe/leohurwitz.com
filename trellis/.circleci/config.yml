@@ -24,7 +24,7 @@ orbs:
           - checkout
           - restore_cache:
               keys:
-                - ansible-v1-<< parameters.python-version >>-<< parameters.ansible-version >>-{{ checksum "requirements.yml" }}
+                - ansible-v1-<< parameters.python-version >>-<< parameters.ansible-version >>-{{ checksum "galaxy.yml" }}
           - run:
               name: Install Python dependencies in a venv
               command: |
@@ -36,9 +36,9 @@ orbs:
               name: Install Galaxy roles
               command: |
                 . venv/bin/activate
-                ansible-galaxy install -r requirements.yml
+                ansible-galaxy install -r galaxy.yml
           - save_cache:
-              key: ansible-v1-<< parameters.python-version >>-<< parameters.ansible-version >>-{{ checksum "requirements.yml" }}
+              key: ansible-v1-<< parameters.python-version >>-<< parameters.ansible-version >>-{{ checksum "galaxy.yml" }}
               paths:
                 - venv
                 - vendor
@@ -49,6 +49,17 @@ orbs:
                 ansible-playbook --syntax-check -e env=development deploy.yml
                 ansible-playbook --syntax-check -e env=development dev.yml
                 ansible-playbook --syntax-check -e env=development server.yml
+                ansible-playbook --syntax-check -e env=development rollback.yml
+                ansible-playbook --syntax-check -e xdebug_tunnel_inventory_host=1 xdebug-tunnel.yml
+
+      lint:
+        executor: python-3
+        steps:
+          - run: python --version
+          - checkout
+          - run: sudo pip install ansible-lint
+          - run: ansible-lint --version
+          - run: ansible-lint deploy.yml dev.yml server.yml rollback.yml xdebug-tunnel.yml
 
 workflows:
   syntax-check:
@@ -58,39 +69,26 @@ workflows:
           python-version: '3'
           ansible-version: ''
       - trellis/syntax-check:
+          name: syntax-check-python-3-ansible-2.9
+          python-version: '3'
+          ansible-version: ~=2.9.0
+      - trellis/syntax-check:
           name: syntax-check-python-3-ansible-2.8
           python-version: '3'
           ansible-version: ~=2.8.0
-      - trellis/syntax-check:
-          name: syntax-check-python-3-ansible-2.7
-          python-version: '3'
-          ansible-version: ~=2.7.0
-      - trellis/syntax-check:
-          name: syntax-check-python-3-ansible-2.6
-          python-version: '3'
-          ansible-version: ~=2.6.0
-      - trellis/syntax-check:
-          name: syntax-check-python-3-ansible-2.5
-          python-version: '3'
-          ansible-version: ~=2.5.0
 
       - trellis/syntax-check:
           name: syntax-check-python-2-ansible-latest
           python-version: '2'
           ansible-version: ''
       - trellis/syntax-check:
+          name: syntax-check-python-2-ansible-2.9
+          python-version: '2'
+          ansible-version: ~=2.9.0
+      - trellis/syntax-check:
           name: syntax-check-python-2-ansible-2.8
           python-version: '2'
           ansible-version: ~=2.8.0
-      - trellis/syntax-check:
-          name: syntax-check-python-2-ansible-2.7
-          python-version: '2'
-          ansible-version: ~=2.7.0
-      - trellis/syntax-check:
-          name: syntax-check-python-2-ansible-2.6
-          python-version: '2'
-          ansible-version: ~=2.6.0
-      - trellis/syntax-check:
-          name: syntax-check-python-2-ansible-2.5
-          python-version: '2'
-          ansible-version: ~=2.5.0
+  lint:
+    jobs:
+      - trellis/lint
