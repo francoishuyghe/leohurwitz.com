@@ -11,19 +11,6 @@ $theme-colors: (
 
 $grid-gutter: 50px;
 
-//Underline
-.underline {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  line-height: 0.75;
-}
-
-.no-underline{
-  display: inline-block;
-  line-height: 0.75;
-  border-bottom: 1px solid transparent;
-}
-
 //fonts
 
 @font-face {
@@ -51,3 +38,67 @@ $grid-gutter: 50px;
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+
+//Underline Mixins
+
+@mixin text-underline-crop($background) {
+  text-shadow:  .03em 0 $background, 
+                -.03em 0 $background,
+                0 .03em $background,
+                0 -.03em $background,
+                .06em 0 $background,
+                -.06em 0 $background,
+                .09em 0 $background,
+                -.09em 0 $background,
+                .12em 0 $background,
+                -.12em 0 $background,
+                .15em 0 $background,
+                -.15em 0 $background;
+}
+
+@mixin text-background($color-bg, $color-text, $color-hover) {
+  background-image: linear-gradient($color-text, $color-text);
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  background-position:  0% 95%;
+
+  &:hover{
+    background-image: linear-gradient($color-hover, $color-hover);
+  }
+}
+
+@mixin text-selection($selection) {
+  &::selection {
+      @include text-underline-crop($selection);
+  
+      background: $selection;
+  }
+
+  &::-moz-selection {
+      @include text-underline-crop($selection);
+  
+      background: $selection;
+  }
+}
+
+@mixin link-underline($background, $text, $selection, $color-hover){
+  @include text-underline-crop($background);
+  @include text-background($background, $text, $color-hover);
+  @include text-selection($selection);
+
+  color: $text;
+  text-decoration: none;
+
+  *,
+  *:after,
+  &:after,
+  *:before,
+  &:before {
+      text-shadow: none;
+  }
+
+  &:visited {
+      color: $text;
+  }
+}

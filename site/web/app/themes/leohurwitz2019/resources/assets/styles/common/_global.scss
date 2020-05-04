@@ -60,19 +60,37 @@ p{
   margin-bottom: 1em;
 }
 
+//Underline
+$color-text:        theme-color(black);
+$color-background:  theme-color(white);
+$color-selection:   #B3D7FE;
+$color-hover:       theme-color(grey);
+
+.inverted-underline {
+  background: transparent;
+
+  &:hover{
+    @include link-underline($color-background, $color-text, $color-selection, $color-hover);
+  }
+}
+
+.underline{
+  @include link-underline($color-background, $color-text, $color-selection, $color-hover);
+}
+
+.no-underline{
+  background: transparent;
+}
+
 a,
 a.wp-block-button__link{
-  @extend .underline;
-
+  @include link-underline($color-background, $color-text, $color-selection, $color-hover);
   color: theme-color(black);
-  background: transparent;
-  padding: 0;
 
 
   &:hover{
     color: theme-color(black);
     text-decoration: none;
-    border-color: theme-color(grey);
   }
 }
 

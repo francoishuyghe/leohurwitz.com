@@ -4,10 +4,6 @@ footer{
     font-size: .8em;
 
     a{
-        @extend .no-underline;
-
-        &:hover{
-            @extend .underline;
-        }
+        @extend .inverted-underline;
     }
 }

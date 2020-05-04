@@ -9,12 +9,9 @@
 
     @if($posts->have_posts())
     <section>
-      <div class="row news-wrap">
+      <div class="news-wrap">
       @while($posts->have_posts()) @php $posts->the_post() @endphp
-        <div class="col-md-6 post">
-          <h2>{{ the_title() }}</h2>
-          {{ the_excerpt() }}
-        </div>
+        @include('partials.single-news')
       @endwhile
       </div>
     </section>

@@ -312,11 +312,7 @@
                 margin-bottom: 1em;
 
                 a{
-                    @extend .no-underline;
-
-                    &:hover{
-                        @extend .underline;
-                    }
+                    @extend .inverted-underline;
 
                     &.wp-block-file__button{
                         display: none;
@@ -336,6 +332,25 @@
         .photo{
             display: block;
 
+        }
+    }
+}
+
+//News
+
+.page.news{
+    .single-news{
+        margin-bottom: $grid-gutter;
+
+        h6{
+            text-transform: uppercase;
+            font-size: .8em;
+            color: theme-color(darkgrey);
+            margin-bottom: 10px;
+        }
+    
+        h3{
+            margin-bottom: 0;
         }
     }
 }
