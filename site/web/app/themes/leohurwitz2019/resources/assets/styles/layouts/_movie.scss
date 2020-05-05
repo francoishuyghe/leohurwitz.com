@@ -26,16 +26,6 @@
         background-size: cover;
         background-position: center;
 
-        @include media-breakpoint-down(sm){
-            padding: $grid-gutter / 2 15px;
-
-            .video-wrap{
-                .video-btn{
-                    font-size: $grid-gutter;
-                }
-            }
-        }
-
         .gradient{
             position: absolute;
             bottom: 0;
@@ -62,11 +52,15 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                font-size: 40px;
+                font-size: $grid-gutter;
                 cursor: pointer;
                 transform: translate(-50%, -50%);
                 transition: .25s;
                 z-index: 99;
+                
+                @include media-breakpoint-up(md){
+                    font-size: 40px;
+                }
 
                 &:hover{
                     transform: translate(-50%, -50%) scale(1.1);
@@ -120,7 +114,11 @@
             margin-top: $grid-gutter * 2;
 
             h1{
-                margin-bottom: $grid-gutter;
+                margin-bottom: $grid-gutter / 2;
+
+                @include media-breakpoint-up(md){
+                    margin-bottom: $grid-gutter;
+                }
             }
 
             .collaborators{
@@ -184,4 +182,9 @@
             }
         }
     }
+}
+
+//Slick align left
+.slick-track{
+    margin-left: 0;
 }
