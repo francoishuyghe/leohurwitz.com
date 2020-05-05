@@ -122,13 +122,16 @@ section{
 .accordeon{
   .accordeon-header{
     cursor: pointer;
+    padding-left: 20px;
 
     .down{
       display: none;
+      margin-left: -20px;
     }
     
     .up{
       display: inline-block;
+      margin-left: -20px;
     }
   }
 
