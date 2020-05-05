@@ -89,6 +89,7 @@
             margin-top: 20px;
 
             a{
+                @extend .inverted-underline;
                 color: theme-color(black);
                 margin: 0 10px;
                 display: inline-block;
@@ -97,7 +98,7 @@
                 cursor: pointer;
 
                 &.active{
-                    border-bottom: 2px solid theme-color(black);
+                    @extend .underline;
                 }
             }
         }
