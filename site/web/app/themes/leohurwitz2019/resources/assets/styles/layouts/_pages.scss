@@ -171,10 +171,13 @@
 //Films page
 .films,
 .interviews{
-    .page-header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+
+    @include media-breakpoint-up(md){
+        .page-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     .sort-options{
@@ -185,7 +188,7 @@
             color: theme-color(grey);
             cursor: pointer;
             padding-left: 10px;
-            border-color: transparent;
+            @extend .no-underline;
 
             &.active{
                 color: theme-color(black);
@@ -204,14 +207,13 @@
     display: block;
 
     .movie{
-        height: 400px;
         display: inline-block;
         vertical-align: top;
-
-        &.hasFilm{
-            .thumbnail{
-                
-            }    
+        margin-bottom: $grid-gutter;
+        
+        @include media-breakpoint-up(md){
+            height: 400px;
+            margin-bottom: 0;
         }
 
         a{

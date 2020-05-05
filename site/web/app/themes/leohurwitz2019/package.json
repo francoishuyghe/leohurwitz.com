@@ -76,6 +76,7 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
+    "@vimeo/player": "^2.11.0",
     "bootstrap": "v4.3.1",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.5.0",
