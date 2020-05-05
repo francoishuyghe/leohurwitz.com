@@ -35,7 +35,11 @@
         }
 
         &.active{
-            border-color: theme-color(black);
+            border-color: transparent;
+
+            @include media-breakpoint-up(md){
+                border-color: theme-color(black);
+            }
 
             .brand{
                 opacity: 1;

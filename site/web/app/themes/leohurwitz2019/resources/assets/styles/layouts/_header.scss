@@ -83,10 +83,20 @@
   }
 
   &.active{
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    
     .bottom{
-      height: 100vh;
+      flex: 1;
+      overflow: auto;
+      border-color: transparent;
+    }
 
-      @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md){
+      height: auto;
+
+      .bottom{
         height: 280px;
       }
     }
