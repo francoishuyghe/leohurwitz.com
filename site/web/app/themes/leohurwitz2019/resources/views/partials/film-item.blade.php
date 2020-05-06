@@ -6,7 +6,7 @@
     endif;
 @endphp
 
-<div class="col-md-4 movie @if($hasFilm) hasFilm @endif" data-name="{{ the_title() }}" data-year="{{ the_field('year') }}">
+<div class="col-md-6 col-lg-4 movie @if($hasFilm) hasFilm @endif" data-name="{{ the_title() }}" data-year="{{ the_field('year') }}">
     <a href="{{ the_permalink() }}">
         @php $thumb = get_the_post_thumbnail_url() @endphp
         <div class="thumbnail" style="background-image: url(@if($thumb){{ $thumb }} @else @asset('images/film-default.png') @endif)"></div>
