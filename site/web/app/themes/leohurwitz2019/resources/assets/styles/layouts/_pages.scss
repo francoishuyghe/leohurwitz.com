@@ -358,6 +358,10 @@
     .single-news{
         margin-bottom: $grid-gutter;
 
+        a{
+            @extend .inverted-underline;
+        }
+
         h6{
             text-transform: uppercase;
             font-size: .8em;

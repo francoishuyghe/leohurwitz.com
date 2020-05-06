@@ -81,6 +81,10 @@ $color-hover:       theme-color(grey);
 
 .no-underline{
   background: transparent;
+
+  &:hover{
+    background: transparent;
+  }
 }
 
 a,
