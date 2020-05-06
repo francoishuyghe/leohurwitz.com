@@ -196,10 +196,14 @@ figcaption{
           }
 
           h2{
-            margin: $grid-gutter * 2 0 $grid-gutter;
+            margin: $grid-gutter 0 $grid-gutter / 2;
 
             &:first-child{
               margin-top: 0;
+            }
+
+            @include media-breakpoint-up(lg){
+              margin: $grid-gutter * 2 0 $grid-gutter;
             }
           }
 
@@ -207,10 +211,16 @@ figcaption{
           margin: $grid-gutter 0 $grid-gutter / 2;
 
           p{
-            border-top: 2px solid theme-color(black);
             padding: 0;
-            padding-top: $grid-gutter / 2;
             max-width: 100%;
+
+            &:before{
+              content: "";
+              display: block;
+              border-top: 2px solid theme-color(black);
+              max-width: $grid-gutter * 3;
+              margin-bottom: $grid-gutter / 2;
+            }
           }
           
           &:first-child{
@@ -229,7 +239,7 @@ figcaption{
 
         .wp-block-image{
           margin: $grid-gutter 0;
-          //text-align: center;
+          text-align: center;
 
           @include media-breakpoint-up(lg){
             margin: 0;
