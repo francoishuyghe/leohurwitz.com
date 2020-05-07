@@ -32,7 +32,7 @@
             <div class="col-md-12">
             <a href="{{ $menu_item['link'] }}">
               <h2>{{ $menu_item['title'] }}</h2>
-              <i class="fal fa-arrow-right"></i>
+              <img src="@asset('images/arrow.svg')" class="arrow" />
             </a>
             </div>
           <div class="col-md-6">

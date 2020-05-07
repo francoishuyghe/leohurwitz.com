@@ -31,8 +31,8 @@ h1{
 h2{
     font-family: miller-display, serif;
     font-weight: 100;
-    line-height: 1.4em;
-    font-size: 1.2em;
+    line-height: 1.3em;
+    font-size: 1.5em;
     margin-bottom: $grid-gutter / 2;
 
     @include media-breakpoint-up(md){
@@ -110,10 +110,15 @@ section{
 
 .wp-block-quote{
   font-family: miller-display, serif;
-  font-size: 1.2em;
+  font-size: 1.4em;
+
+  p{
+    line-height: 1.3em;
+    font-weight: 100;
+  }
 
   @include media-breakpoint-up(md){
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 }
 
@@ -211,17 +216,22 @@ figcaption{
             }
           }
 
+          p{
+            margin-bottom: $grid-gutter;
+          }
+
         .wp-block-quote{
-          margin: $grid-gutter 0 $grid-gutter / 2;
+          margin: 0 0 $grid-gutter;
 
           p{
             padding: 0;
             max-width: 100%;
+            margin-bottom: 0;
 
             &:before{
               content: "";
               display: block;
-              border-top: 2px solid theme-color(black);
+              border-top: 1px solid theme-color(black);
               max-width: $grid-gutter * 3;
               margin-bottom: $grid-gutter / 2;
             }
@@ -229,6 +239,13 @@ figcaption{
           
           &:first-child{
             margin-top: 0;
+
+            p{
+              &:before{
+                border-color: transparent;
+                margin-bottom: 0;
+              }
+            }
           }
 
 
@@ -242,10 +259,11 @@ figcaption{
         }
 
         .wp-block-image{
-          margin: $grid-gutter 0;
+          margin: 0 0 $grid-gutter;
           text-align: center;
 
           @include media-breakpoint-up(lg){
+            margin: $grid-gutter 0;
             text-align: left;
             margin: 0;
           }

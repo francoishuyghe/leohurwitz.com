@@ -9,7 +9,7 @@
       <div class="container">
       <div class="row">
         @while($all_collaborators->have_posts()) @php($all_collaborators->the_post())
-        <div class="person col-md-3">
+        <div class="person col-6 col-md-4 col-lg-3">
           <a href="{{ the_permalink() }}">
             <div class="thumbnail" style="background-image: url('{{ the_post_thumbnail_url() }}');"></div>
             <h4>{{ the_title() }}</h4>

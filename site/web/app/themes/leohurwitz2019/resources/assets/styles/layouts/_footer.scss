@@ -3,6 +3,14 @@ footer.content-info{
     padding: 10px 0;
     font-size: .8em;
 
+    section{
+        margin-bottom: 0;
+    }
+
+    h3{
+        display: none;
+    }
+
     a{
         @extend .inverted-underline;
     }

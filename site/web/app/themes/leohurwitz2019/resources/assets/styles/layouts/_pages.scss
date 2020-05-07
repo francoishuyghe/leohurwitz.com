@@ -47,6 +47,10 @@
         }
     }
 
+    .page-header{
+        margin-bottom: $grid-gutter / 2;
+    }
+
     h1{
         font-family: 'HelveticaNeue', sans-serif;
         text-transform: uppercase;
@@ -77,16 +81,30 @@
             a{
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 color: theme-color(black);
                 @extend .no-underline;
+                margin-bottom: $grid-gutter / 2;
 
-                svg{
-                    font-size: 40px;
+                @include media-breakpoint-up(md){
+                    margin-bottom: $grid-gutter;
+                }
+
+                h2{
+                    margin-bottom: 0;
+                }
+
+                .arrow{
+                    height: 30px;
                     transition: .25s;
+
+                    @include media-breakpoint-up(md){
+                        height: 40px;
+                    }
                 }
 
                 &:hover{
-                    svg{
+                    .arrow{
                         transform: translateX(10px);
                     }
                 }
@@ -162,7 +180,7 @@
     .wp-block-quote{
      &:last-child{
          @include media-breakpoint-up(lg){
-            margin-top: -400px;
+            margin-top: -200px!important;
         }
      }   
     }
@@ -272,12 +290,15 @@
 
 //Key People
 .person{
-    margin-bottom: $grid-gutter;
-    text-align: left;
+    margin-bottom: $grid-gutter / 2;
 
     a{
         @extend .no-underline;
         display: block;
+
+        h4{
+            font-size: 1em;
+        }
 
         .thumbnail{
             height: 0;
@@ -296,6 +317,10 @@
                 opacity: .8;
             }
         }
+    }
+
+    @include media-breakpoint-up(md){
+        margin-bottom: $grid-gutter;
     }
 }
 
