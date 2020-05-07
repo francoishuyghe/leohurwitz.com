@@ -1,22 +1,15 @@
 .single-collaborators{
     .movies-wrap{
-        a{
-            @extend .no-underline;
-
-            h4{
-                margin-bottom: 0;
-                @extend .no-underline;
+        h4{
+            margin-bottom: 0;
+            
+            a{
+                @extend .inverted-underline;
             }
+        }
 
-            h5{
-                margin-bottom: 10px;
-            }
-
-            &:hover{
-                h4{
-                    @extend .underline;
-                }
-            }
+        h5{
+            margin-bottom: 10px;
         }
     }
 }

@@ -25,10 +25,8 @@
             @endif
         
             <div class="col-12">
-                <a href="{{ the_permalink() }}">
-                  <h4>{{ the_title() }}{{ the_field('subtitle') }}</h4>
-                  <h5>{{ $dateDisplay }}</h5>
-                </a>
+              <h4><a href="{{ the_permalink() }}">{{ the_title() }}{{ the_field('subtitle') }}</a></h4>
+              <h5>{{ $dateDisplay }}</h5>
             </div>
           @endwhile
         </div>
