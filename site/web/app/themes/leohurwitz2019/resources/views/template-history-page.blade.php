@@ -17,6 +17,9 @@
         @include('partials.content-page')
       </div>
     </section>
+    <div class="back-to-top">
+      <img src="@asset("images/arrow.svg")" />
+    </div>
   @endwhile
 @endsection
 

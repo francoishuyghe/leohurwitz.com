@@ -14,5 +14,8 @@
         @endforeach
       </div>
     </div>
+    <div class="back-to-top">
+      <img src="@asset("images/arrow.svg")" />
+    </div>
       </section>
       @endif

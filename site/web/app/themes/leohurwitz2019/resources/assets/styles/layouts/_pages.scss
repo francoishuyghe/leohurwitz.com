@@ -177,6 +177,10 @@
     }
 
 .template-history-page{
+    #mainContent{
+        margin-bottom: $grid-gutter * 2;
+    }
+
     .wp-block-quote{
      &:last-child{
          @include media-breakpoint-up(lg){
@@ -396,6 +400,36 @@
     
         h3{
             margin-bottom: 0;
+        }
+    }
+}
+
+// Back to Top
+.back-to-top{
+    opacity: 0;
+    position: fixed;
+    bottom: $grid-gutter / 2;
+    right: 10px;
+    background: theme-color(white);
+    padding: 10px;
+    transition: .25s;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    img{
+        height: 20px;
+        transform: rotate(-90deg);
+    }
+
+    @include media-breakpoint-up(md){
+        bottom: $grid-gutter;
+        right: $grid-gutter / 2;
+
+        img{
+            height: 30px;
         }
     }
 }
