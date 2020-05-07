@@ -16,7 +16,13 @@
               </div>
             </a>
     @endforeach
-    </div>
+  </div>
+              <div class="arrow prev">
+                <img src="@asset('images/arrow.svg')" />
+              </div>
+              <div class="arrow next">
+                <img src="@asset('images/arrow.svg')" />
+              </div>
 </div>
 
 <script>
@@ -29,8 +35,8 @@
             slidesToShow: 3,
             arrows: true,
             //centerPadding: '50px',
-            // prevArrow: '.prevArrow',
-            // nextArrow: '.nextArrow',
+            prevArrow: '.prev',
+            nextArrow: '.next',
             responsive: [
             {
                 breakpoint: 768,

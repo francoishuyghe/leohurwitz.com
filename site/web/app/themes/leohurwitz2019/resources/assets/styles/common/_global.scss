@@ -405,6 +405,8 @@ figcaption{
 
 //Carousels
 .wp-block-carousel{
+  position: relative;
+
   .slides{
     .slide{
       padding: $grid-gutter / 2;
@@ -421,10 +423,50 @@ figcaption{
     }
   }
 
-  .slick-next:before, 
-  .slick-prev:before{
-    color: theme-color(grey)!important;
-    font-size: 30px;
+  .arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: theme-color(white);
+    padding: 10px;
+    
+    img{
+      transition: .25s;
+      height: 30px;
+    }
+
+    &.prev{
+      left: 20px;
+
+      img{
+        transform: rotate(180deg);
+      }
+
+      @include media-breakpoint-up(md){
+        left: 0;
+        
+        &:hover{
+          img{
+            transform: rotate(180deg) translateX(20px);
+          }
+        }
+      }
+    }
+
+    &.next{
+      right: 20px;
+
+      @include media-breakpoint-up(md){
+        right: 0;
+
+        &:hover{
+          img{
+            transform: translateX(20px);
+          }
+        }
+      }
+    }
   }
 }
 
