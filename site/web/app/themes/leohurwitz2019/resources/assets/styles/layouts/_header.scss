@@ -138,6 +138,7 @@
       padding-right: $grid-gutter;
       flex: 1;
       margin-bottom: $grid-gutter/ 2;
+      text-align: center;
 
       &.brand{
         display: none;
@@ -151,6 +152,8 @@
       
 
       @include media-breakpoint-up(lg){
+        text-align: left;
+
         &.brand{
           display: block;
           margin-bottom: 0;
@@ -188,7 +191,7 @@
       
       & > a{
         display: inline-block;
-        margin-bottom: 1em;
+        margin-bottom: .5em;
         font-weight: bold;
 
         @include media-breakpoint-up(lg){
