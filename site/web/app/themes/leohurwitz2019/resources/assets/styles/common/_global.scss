@@ -68,6 +68,12 @@ p{
   }
 }
 
+@include media-breakpoint-up(xl){
+  .container{
+    max-width: 1140px;
+  }
+}
+
 //Underline
 $color-text:        theme-color(black);
 $color-background:  theme-color(white);
