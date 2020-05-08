@@ -6,22 +6,22 @@
   z-index: 2;
   border-bottom: 1px solid theme-color(black);
 
+  .brand{
+    @extend .no-underline;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
   .top{
     position: relative;
     z-index: 1;
     text-transform: uppercase;
     padding: 0;
-    height: 50px;
+    height: $grid-gutter;
     background: theme-color(white);
     display: flex;
     align-items: center;
     justify-content: center;
-
-    .brand{
-      @extend .no-underline;
-      font-size: 1.2em;
-      font-weight: 600;
-    }
 
     .menu-toggle{
       position: absolute;
@@ -47,29 +47,15 @@
       }
     }
 
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(lg){
+      display: none;
+
       .menu-toggle{
         font-size: .8em;
         left: $grid-gutter / 2;
 
         &.hamburger{
           display: none;
-        }
-
-        &.menu-text{
-          display: inline-block;
-          background: transparent;
-          border: 0;
-          transition: .25s;
-
-          &:hover{
-            color: theme-color(grey);
-          }
-
-          &:focus{
-            outline: 0;
-            border: 0;
-          }
         }
       }
     }
@@ -80,7 +66,28 @@
     height: 0;
     overflow: hidden;
     background: theme-color(white);
-    transition: .25s;
+    transition: .4s;
+  }
+  
+  @include media-breakpoint-up(lg){
+    
+    .bottom{
+      padding: 0 30px;
+      height: $grid-gutter;
+    }
+
+    &:hover{
+      height: auto;
+
+      ul.nav > li.brand{
+        opacity: 1;
+        margin-top: 0;
+      }
+
+      .bottom{
+        height: 280px;
+      }
+    }
   }
 
   &.active{
@@ -94,13 +101,7 @@
       border-color: transparent;
     }
 
-    @include media-breakpoint-up(md){
-      height: auto;
-
-      .bottom{
-        height: 280px;
-      }
-    }
+    
   }
 }
 
@@ -109,10 +110,15 @@
   ul.nav{
     padding: 0;
     font-size: .7em;
-    padding-top: $grid-gutter / 2;
+    padding: $grid-gutter / 2;
     flex-flow: column;
 
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(lg){
+      flex-flow: row wrap;
+      padding: 0;
+    }
+
+    @include media-breakpoint-up(xl){
       flex-flow: row;
     }
 
@@ -132,11 +138,62 @@
       padding-right: $grid-gutter;
       flex: 1;
       margin-bottom: $grid-gutter/ 2;
+
+      &.brand{
+        display: none;
+
+        a{
+          @extend .no-underline;
+          font-size: 1.4em;
+          line-height: 1.2em;
+        }
+      }
+      
+
+      @include media-breakpoint-up(lg){
+        &.brand{
+          display: block;
+          margin-bottom: 0;
+          flex: 0 100%;
+          order: -1;
+          text-align: center;
+          margin-top: -2.4em;
+
+          a{
+            margin-bottom: 0;
+          }
+        }
+
+        &:first-child{
+          min-width: 220px;
+        }
+
+        &:last-child{
+          flex: 0 150px;
+          padding-right: 0;
+        }
+      }
+
+      @include media-breakpoint-up(xl){
+        flex: 0;
+        font-size: 1.4em;
+
+        &.brand{
+          order: inherit;
+          flex: 1;
+        }
+      }
+
+      
       
       & > a{
         display: inline-block;
         margin-bottom: 1em;
         font-weight: bold;
+
+        @include media-breakpoint-up(lg){
+          padding: .3em 0;
+        }
       }
 
       &.inactive{
@@ -155,7 +212,7 @@
       padding-left: 0;
 
       li{
-        font-size: 1em;
+        font-size: 16px;
         text-transform: none;
         margin-bottom: 10px;
 

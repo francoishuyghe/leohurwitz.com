@@ -29,8 +29,18 @@
         &.scrolled{
             border-color: theme-color(black);
 
-            .brand{
-                opacity: 1;
+            &:hover{
+                .brand{
+                    opacity: 1;
+                    margin-top: 0;
+                }
+            }
+
+            @include media-breakpoint-up(lg){
+                .brand{
+                    opacity: 1;
+                    margin-top: 0;
+                }
             }
         }
 

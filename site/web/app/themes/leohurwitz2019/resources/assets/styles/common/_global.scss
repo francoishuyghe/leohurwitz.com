@@ -61,6 +61,13 @@ p{
   margin-bottom: 1em;
 }
 
+//Container on Medium
+@include media-breakpoint-up(md){
+  .container{
+    max-width: 960px;
+  }
+}
+
 //Underline
 $color-text:        theme-color(black);
 $color-background:  theme-color(white);
