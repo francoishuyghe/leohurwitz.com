@@ -27,7 +27,7 @@
       position: absolute;
       font-size: 0;
       left: 15px;
-      color: theme-color(grey);
+      //color: theme-color(grey);
       cursor: pointer;
 
       &.menu-text{
@@ -63,7 +63,7 @@
           transition: .25s;
 
           &:hover{
-            color: theme-color(black);
+            color: theme-color(grey);
           }
 
           &:focus{
