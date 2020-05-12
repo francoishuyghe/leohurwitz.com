@@ -135,7 +135,6 @@
       list-style: none;
       font-size: 1.2em;
       text-transform: uppercase;
-      padding-right: $grid-gutter;
       flex: 1;
       margin-bottom: $grid-gutter/ 2;
       text-align: center;
@@ -153,6 +152,7 @@
 
       @include media-breakpoint-up(lg){
         text-align: left;
+        padding-right: $grid-gutter;
 
         &.brand{
           display: block;
@@ -160,7 +160,6 @@
           flex: 0 100%;
           order: -1;
           text-align: center;
-          margin-top: -2.4em;
 
           a{
             margin-bottom: 0;

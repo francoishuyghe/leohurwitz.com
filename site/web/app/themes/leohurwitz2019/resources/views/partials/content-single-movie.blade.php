@@ -7,8 +7,8 @@
     <section id="content">
       <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h1 class="entry-title">{!! get_the_title() !!}</h1>
+      <div class="col-md-12 entry-title">
+        <h1>{!! get_the_title() !!}</h1>
         @if($data['subtitle'])<h4>{{ $data['subtitle'] }}</h4>@endif
       </div>
       <div class="col-md-6">

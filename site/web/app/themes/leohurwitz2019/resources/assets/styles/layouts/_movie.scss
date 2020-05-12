@@ -116,11 +116,16 @@
             border-top: 0;
             margin-top: $grid-gutter * 2;
 
-            h1{
+            .entry-title{ 
                 margin-bottom: $grid-gutter / 2;
 
-                @include media-breakpoint-up(md){
-                    margin-bottom: $grid-gutter;
+                h1{
+                    margin-bottom: 10px;
+                }
+
+                h4{
+                    color: theme-color(grey);
+                    text-transform: uppercase;
                 }
             }
 

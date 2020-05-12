@@ -24,6 +24,10 @@
         .brand{
             transition: .25s;
             opacity: 0;
+
+            @include media-breakpoint-up(lg){
+                margin-top: -2.4em;
+            }
         }
 
         &.scrolled{
