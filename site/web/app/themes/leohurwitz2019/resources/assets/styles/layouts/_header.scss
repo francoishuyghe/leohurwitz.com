@@ -222,7 +222,16 @@
           line-height: 1.2em;
         }
 
-        &.current-menu-item,
+        &.current-menu-item{
+          a,
+          a:visited{
+            color: theme-color(darkgrey);
+            @extend .underline;
+            cursor: default;
+            pointer-events: none;
+          }
+        }
+
         &:hover{
           a{
             @extend .underline;
