@@ -410,6 +410,20 @@
             font-size: .8em;
             color: theme-color(darkgrey);
             margin-bottom: 10px;
+            
+            &:before{
+                content: '';
+                display: block;
+                width: 100px;
+                border-top: 1px solid theme-color(black);
+                margin-bottom: $grid-gutter;
+            }
+        }
+
+        &:first-child{
+            h6:before{
+                border-top: 0;
+            }
         }
     
         h3{
