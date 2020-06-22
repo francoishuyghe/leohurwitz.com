@@ -122,6 +122,12 @@
       flex-flow: row;
     }
 
+    li.current-menu-parent{
+      & > a{
+        color: theme-color(grey);
+      }
+    }
+
     a{
       font-weight: 600;
       font-size: 1.2em;
