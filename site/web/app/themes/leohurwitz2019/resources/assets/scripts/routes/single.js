@@ -30,39 +30,55 @@ export default {
     
     //Vimeo Init
     var iframe = document.querySelector('iframe');
-    var player = new Vimeo(iframe);
+
+    if ( iframe.src.includes('vimeo') ) {
+      //VIMEO
+
+      var player = new Vimeo(iframe);
     
-    // Video Player
-    $('.video-btn').click(function () {
-      $(this).parent('.video-player').addClass('active');
-      player.play();
-    });
-
-        $('.video-player').click(function () {
-          $(this).parent('.video-player').removeClass('active');
-        });
-    
-    // When the movie has two parts
-    $('.selection a').click(function () { 
-      player.pause();
-
-      //Change display of selection
-      $('.selection a').removeClass('active');
-      $(this).addClass('active');
-
-
-      //Load the correct video URL
-      let index = $(this).data('movie');
-      let video_url = $('.video-player').data('film-' + index);
-      let id = video_url.split('/').pop();
-      player.loadVideo(id).then(function () { 
+      // Video Player
+      $('.video-btn').click(function () {
+        $(this).parent('.video-player').addClass('active');
         player.play();
       });
 
-      //Reveal the video
-      $('.video-player').addClass('active');
+      $('.video-player').click(function () {
+        $(this).parent('.video-player').removeClass('active');
+      });
+    
+      // When the movie has two parts
+      $('.selection a').click(function () {
+        player.pause();
 
-    });
+        //Change display of selection
+        $('.selection a').removeClass('active');
+        $(this).addClass('active');
+
+
+        //Load the correct video URL
+        let index = $(this).data('movie');
+        let video_url = $('.video-player').data('film-' + index);
+        let id = video_url.split('/').pop();
+        player.loadVideo(id).then(function () {
+          player.play();
+        });
+
+        //Reveal the video
+        $('.video-player').addClass('active');
+      });
+
+    } else { 
+      //YOUTUBE
+
+      // Video Player
+      $('.video-btn').click(function () {
+        $(this).parent('.video-player').addClass('active');
+      });
+
+      $('.video-player').click(function () {
+        $(this).parent('.video-player').removeClass('active');
+      });
+    }
         
     },
     finalize() {
