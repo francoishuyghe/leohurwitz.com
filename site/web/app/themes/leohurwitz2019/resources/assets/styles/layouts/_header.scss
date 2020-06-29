@@ -85,7 +85,7 @@
       }
 
       .bottom{
-        height: 280px;
+        height: 240px;
       }
     }
   }
@@ -110,7 +110,7 @@
   ul.nav{
     padding: 0;
     font-size: .7em;
-    padding: $grid-gutter / 2;
+    padding: $grid-gutter / 2 $grid-gutter / 2 $grid-gutter;
     flex-flow: column;
 
     @include media-breakpoint-up(lg){
@@ -159,6 +159,7 @@
       @include media-breakpoint-up(lg){
         text-align: left;
         padding-right: $grid-gutter;
+        margin-bottom: 0;
 
         &.brand{
           display: block;
