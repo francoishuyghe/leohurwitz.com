@@ -89,7 +89,7 @@
     "lg-video": "^1.2.2",
     "lg-zoom": "^1.1.0",
     "lightgallery": "^1.6.12",
-    "minimist": "^1.2.3",
+    "minimist": "^1.2.6",
     "popper.js": "^1.14.7",
     "shufflejs": "^5.2.3"
   }
